@@ -38,7 +38,7 @@
       "title": "Optimisation & Recherche Opérationnelle",
       "description": "Fiche de révision sur l'optimisation libre, la convexité, les multiplicateurs de Lagrange et les conditions du second ordre.",
       "category": "Mathématiques & Recherche Opérationnelle",
-      "icon": "📈",
+      "icon": "⚙️",
       "file": "data/decks/optimisation-recherche-operationnelle.json",
       "cardsCount": 35,
       "tags": [
@@ -48,6 +48,24 @@
         "Convexité"
       ],
       "difficulty": "Avancé"
+    },
+    {
+      "id": "methodes-numeriques-chap1-2",
+      "title": "Méthodes Numériques - Chapitres 1 et 2",
+      "description": "Deck complet d'une quarantaine de cartes couvrant l'intégralité des notions abordées dans les chapitres 1 et 2 de méthodes numériques.",
+      "category": "Mathématiques & Informatique",
+      "icon": "📊",
+      "file": "data/decks/methodes-numeriques-chap1-2.json",
+      "cardsCount": 40,
+      "tags": [
+        "Méthodes Numériques",
+        "Newton-Raphson",
+        "Gauss & LU",
+        "Interpolation",
+        "Intégration",
+        "EDO"
+      ],
+      "difficulty": "Intermédiaire"
     }
   ]
 }

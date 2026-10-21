@@ -1,0 +1,290 @@
+{
+  "id": "methodes-numeriques-chap1-2",
+  "title": "Méthodes Numériques - Chapitres 1 et 2",
+  "description": "Deck complet de 40 cartes couvrant l'intégralité des notions abordées dans les chapitres 1 et 2 de méthodes numériques.",
+  "category": "Mathématiques & Informatique",
+  "icon": "📊",
+  "language": "fr-FR",
+  "cards": [
+    {
+      "id": 1,
+      "question": "Quel est l'objectif principal des méthodes numériques ?",
+      "answer": "Résoudre par approximation algorithmique des problèmes mathématiques complexes qui ne possèdent pas de solution analytique exacte ou dont la résolution exacte est trop coûteuse.",
+      "hint": "Penser au passage de l'analytique au calcul approché par ordinateur.",
+      "tag": "Introduction"
+    },
+    {
+      "id": 2,
+      "question": "Qu'appelle-t-on erreur d'arrondi en calcul numérique ?",
+      "answer": "L'erreur due à la représentation finie des nombres réels dans la mémoire d'un ordinateur (limitation de la mantisse en virgule flottante).",
+      "hint": "Liée au stockage en machine des nombres à précision finie.",
+      "tag": "Erreurs"
+    },
+    {
+      "id": 3,
+      "question": "Quelle est la différence entre l'erreur absolue et l'erreur relative ?",
+      "answer": "L'erreur absolue est la différence en valeur absolue entre la valeur exacte et la valeur approchée ($|x - x^*|$). L'erreur relative est le rapport de cette erreur absolue par la valeur exacte ($|x - x^*| / |x|$).",
+      "hint": "L'une dépend de l'échelle, l'autre est sans dimension.",
+      "tag": "Erreurs"
+    },
+    {
+      "id": 4,
+      "question": "Qu'est-ce que l'annulation catastrophique (ou perte de significativité) ?",
+      "answer": "La perte de précision importante qui survient lors de la soustraction de deux nombres approchés très proches l'un de l'autre.",
+      "hint": "Soustraction de grands nombres voisins.",
+      "tag": "Erreurs"
+    },
+    {
+      "id": 5,
+      "question": "Qu'est-ce qu'une méthode itérative en analyse numérique ?",
+      "answer": "Une méthode qui génère une suite de valeurs approchées $(x_k)$ convergeant vers la solution recherchée à partir d'une estimation initiale $x_0$.",
+      "hint": "Processus en boucle qui s'affine à chaque étape.",
+      "tag": "Méthodes Itératives"
+    },
+    {
+      "id": 6,
+      "question": "Quel est le principe de la méthode de dichotomie (bisection) pour la recherche de zéro ?",
+      "answer": "Encadrer la racine dans un intervalle $[a, b]$ tel que $f(a)f(b) < 0$, puis diviser l'intervalle en deux à chaque étape en conservant la sous-moitié où le changement de signe s'opère.",
+      "hint": "Diviser l'intervalle par 2 à chaque itération en vérifiant le signe.",
+      "tag": "Recherche de Zéros"
+    },
+    {
+      "id": 7,
+      "question": "Quel est le critère d'arrêt usuel pour une méthode itérative de recherche de racine ?",
+      "answer": "Atteindre une tolérance fixée sur l'écart entre deux itérés successifs ($|x_{k+1} - x_k| < \\epsilon$) ou sur la valeur de la fonction ($|f(x_k)| < \\epsilon$).",
+      "hint": "Quand s'arrêter ? Lorsque la variation devient inférieure à $\\epsilon$.",
+      "tag": "Recherche de Zéros"
+    },
+    {
+      "id": 8,
+      "question": "Quelle est la formule de récurrence de la méthode de Newton-Raphson ?",
+      "answer": "$x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}$.",
+      "hint": "Utilise la tangente en $x_k$ pour trouver l'intersection avec l'axe des abscisses.",
+      "tag": "Newton-Raphson"
+    },
+    {
+      "id": 9,
+      "question": "Quelle est l'ordre de convergence de la méthode de Newton-Raphson sous de bonnes conditions ?",
+      "answer": "Quadratique (l'erreur est élevée au carré à chaque étape, le nombre de décimales exactes double approximativement à chaque itération).",
+      "hint": "Convergence très rapide, quadratique.",
+      "tag": "Newton-Raphson"
+    },
+    {
+      "id": 10,
+      "question": "Quelles sont les limites ou risques majeurs de la méthode de Newton-Raphson ?",
+      "answer": "La divergence si la dérivée est trop proche de zéro ($f'(x_k) \\approx 0$), des oscillations en boucle, ou une sensibilité forte au choix du point initial $x_0$.",
+      "hint": "Que se passe-t-il si la tangente est horizontale ?",
+      "tag": "Newton-Raphson"
+    },
+    {
+      "id": 11,
+      "question": "Quel est le principe de la méthode de la sécante ?",
+      "answer": "Remplacer la dérivée par un taux d'accroissement entre les deux derniers points calculés pour s'affranchir du calcul analytique de la dérivée.",
+      "hint": "Variante de Newton sans calcul de dérivée.",
+      "tag": "Recherche de Zéros"
+    },
+    {
+      "id": 12,
+      "question": "Qu'est-ce qu'une condition suffisante de convergence pour une méthode de point fixe $x_{k+1} = g(x_k)$ ?",
+      "answer": "Que la fonction $g$ soit contractante sur l'intervalle considéré, c'est-à-dire qu'il existe un réel $k < 1$ tel que $|g'(x)| \\le k$ pour tout $x$.",
+      "hint": "La dérivée de la fonction d'itération doit être en module strictement inférieure à 1.",
+      "tag": "Point Fixe"
+    },
+    {
+      "id": 13,
+      "question": "Comment s'écrit un système linéaire sous forme matricielle ?",
+      "answer": "$Ax = b$, où $A$ est une matrice de taille $n \\times n$, $x$ le vecteur des inconnues de taille $n$, et $b$ le second membre.",
+      "hint": "Loi fondamentale de l'algèbre linéaire : $Ax = b$.",
+      "tag": "Systèmes Linéaires"
+    },
+    {
+      "id": 14,
+      "question": "Quel est le principe de la méthode d'élimination de Gauss ?",
+      "answer": "Transformer le système linéaire initial en un système triangulaire supérieur équivalent à l'aide d'opérations élémentaires sur les lignes.",
+      "hint": "Faire apparaître des zéros sous la diagonale.",
+      "tag": "Systèmes Linéaires"
+    },
+    {
+      "id": 15,
+      "question": "À quoi sert le pivotement partiel lors de l'algorithme de Gauss ?",
+      "answer": "À permuter les lignes pour placer le plus grand élément en valeur absolue sur la diagonale, ce qui évite la division par un nombre proche de zéro et réduit les erreurs d'arrondi.",
+      "hint": "Éviter la division par un pivot nul ou trop petit.",
+      "tag": "Systèmes Linéaires"
+    },
+    {
+      "id": 16,
+      "question": "Qu'est-ce que la factorisation LU d'une matrice $A$ ?",
+      "answer": "La décomposition de $A$ sous le produit d'une matrice triangulaire inférieure $L$ (Lower) et d'une matrice triangulaire supérieure $U$ (Upper) : $A = LU$.",
+      "hint": "Scinder $A$ en $L$ et $U$.",
+      "tag": "Décomposition LU"
+    },
+    {
+      "id": 17,
+      "question": "Quel est l'avantage majeur de la décomposition LU pour résoudre plusieurs systèmes $Ax = b$ avec le même $A$ ?",
+      "answer": "Une fois $L$ et $U$ calculées (étape coûteuse en $O(n^3)$), la résolution pour différents vecteurs $b$ se fait très rapidement par des descentes/remontées en $O(n^2)$.",
+      "hint": "Évite de refondre toute l'élimination de Gauss pour chaque nouveau second membre.",
+      "tag": "Décomposition LU"
+    },
+    {
+      "id": 18,
+      "question": "Qu'appelle-t-on conditionnement d'une matrice $A$ ?",
+      "answer": "Un nombre $\\text{cond}(A) = ||A|| \\cdot ||A^{-1}||$ qui mesure la sensibilité de la solution $x$ face à des perturbations sur les données $A$ ou $b$.",
+      "hint": "Plus il est grand, plus le système est mal conditionné (sensible aux erreurs).",
+      "tag": "Conditionnement"
+    },
+    {
+      "id": 19,
+      "question": "Que signifie une matrice mal conditionnée ?",
+      "answer": "Un nombre de conditionnement très supérieur à 1, ce qui signifie que de petites erreurs dans les données d'entrée entraînent des erreurs gigantesques sur la solution calculée.",
+      "hint": "Proche de la singularité, instable numériquement.",
+      "tag": "Conditionnement"
+    },
+    {
+      "id": 20,
+      "question": "Quelle est la différence fondamentale entre les méthodes directes et itératives pour les systèmes linéaires ?",
+      "answer": "Les méthodes directes (Gauss, LU) donnent la solution exacte en un nombre fini d'opérations (aux erreurs d'arrondi près), tandis que les méthodes itératives (Jacobi, Gauss-Seidel) construisent une suite tendant vers la solution.",
+      "hint": "Nombre fini d'étapes vs approximations successives.",
+      "tag": "Méthodes Itératives Linéaires"
+    },
+    {
+      "id": 21,
+      "question": "Quel est le principe de la méthode de Jacobi pour $Ax = b$ ?",
+      "answer": "Isoler chaque composante $x_i$ à partir de la $i$-ième ligne en utilisant uniquement les anciennes valeurs de l'itération précédente : $x_i^{(k+1)} = \\frac{1}{a_{ii}} \\left( b_i - \\sum_{j \\neq i} a_{ij} x_j^{(k)} \\right)$.",
+      "hint": "Mise à jour simultanée de toutes les composantes.",
+      "tag": "Jacobi & Gauss-Seidel"
+    },
+    {
+      "id": 22,
+      "question": "Quel est le principe de la méthode de Gauss-Seidel par rapport à Jacobi ?",
+      "answer": "Utiliser immédiatement les nouvelles valeurs dès qu'elles sont calculées au cours de la même itération, ce qui accélère généralement la convergence.",
+      "hint": "Mise à jour séquentielle en temps réel.",
+      "tag": "Jacobi & Gauss-Seidel"
+    },
+    {
+      "id": 23,
+      "question": "Qu'énonce le théorème de convergence pour Jacobi et Gauss-Seidel basé sur la matrice ?",
+      "answer": "Les méthodes convergent si la matrice $A$ est à diagonale strictement dominante (en ligne ou en colonne) : $|a_{ii}| > \\sum_{j \\neq i} |a_{ij}|$.",
+      "hint": "La diagonale doit être plus grande que la somme des autres termes de la ligne.",
+      "tag": "Convergence"
+    },
+    {
+      "id": 24,
+      "question": "Qu'est-ce que l'interpolation polynomiale ?",
+      "answer": "L'art de trouver un polynôme $P_n(x)$ de degré minimal qui passe exactement par un ensemble de points donnés $(x_i, y_i)$.",
+      "hint": "Trouver une courbe polynomiale qui relie des points de données.",
+      "tag": "Interpolation"
+    },
+    {
+      "id": 25,
+      "question": "Qu'affirme le théorème d'unicité de l'interpolation de Lagrange ?",
+      "answer": "Pour $n+1$ points distincts $(x_i, y_i)$, il existe un et un seul polynôme de degré inférieur ou égal à $n$ qui les interpole tous.",
+      "hint": "Unicité du polynôme interpolateur pour un nombre de points fixé.",
+      "tag": "Interpolation de Lagrange"
+    },
+    {
+      "id": 26,
+      "question": "Quel est l'inconvénient majeur du polynôme d'interpolation de Lagrange pour un grand nombre de points ?",
+      "answer": "Le phénomène de Runge : de fortes oscillations peuvent apparaître aux extrémités de l'intervalle lorsque le degré du polynôme devient élevé.",
+      "hint": "Instabilité aux bords quand le degré augmente.",
+      "tag": "Interpolation"
+    },
+    {
+      "id": 27,
+      "question": "Quel est l'avantage du polynôme de Newton par rapport à la formule de Lagrange lors de l'ajout d'un nouveau point ?",
+      "answer": "La forme de Newton permet de réutiliser tous les calculs précédents et de rajouter simplement un terme, contrairement à Lagrange qu'il faut recalculer entièrement.",
+      "hint": "Facilité d'incrémentation des points.",
+      "tag": "Interpolation de Newton"
+    },
+    {
+      "id": 28,
+      "question": "Qu'est-ce qu'une interpolation par splines (par exemple cubiques) ?",
+      "answer": "Une méthode par morceaux où l'on raccorde des polynômes de degré 3 sur chaque sous-intervalle en assurant la continuité de la fonction, de sa dérivée première et de sa dérivée seconde aux nœuds.",
+      "hint": "Polynômes par morceaux lisses pour éviter les oscillations de Runge.",
+      "tag": "Splines"
+    },
+    {
+      "id": 29,
+      "question": "Quel est le principe de la méthode des moindres carrés pour l'ajustement de données ?",
+      "answer": "Trouver les paramètres d'une courbe modèle en minimisant la somme des carrés des écarts (résidus) entre les données observées et les valeurs du modèle.",
+      "hint": "Minimiser la somme des carrés des erreurs verticales.",
+      "tag": "Moindres Carrés"
+    },
+    {
+      "id": 30,
+      "question": "Comment conduit-on la résolution d'un problème de moindres carrés linéaires ?",
+      "answer": "En posant le système des équations normales $A^T A x = A^T b$, ou en utilisant la factorisation QR de la matrice $A$.",
+      "hint": "Équations normales $A^T A x = A^T b$.",
+      "tag": "Moindres Carrés"
+    },
+    {
+      "id": 31,
+      "question": "Qu'est-ce que l'intégration numérique (ou quadrature) ?",
+      "answer": "L'approximation de l'intégrale définie d'une fonction $\\int_a^b f(x)dx$ par une somme pondérée de valeurs de la fonction en des points choisis : $I \\approx \\sum_{i=0}^n w_i f(x_i)$.",
+      "hint": "Remplacer l'aire sous la courbe par des formes géométriques simples.",
+      "tag": "Intégration Numérique"
+    },
+    {
+      "id": 32,
+      "question": "Quelle est la formule de la méthode des trapèzes pour intégrer $f$ sur $[a, b]$ ?",
+      "answer": "$I \\approx \\frac{b-a}{2} (f(a) + f(b))$.",
+      "hint": "Approche l'aire par un trapèze sous la corde reliant les deux extrêmes.",
+      "tag": "Méthode des Trapèzes"
+    },
+    {
+      "id": 33,
+      "question": "Quelle est la formule de la méthode de Simpson ?",
+      "answer": "$I \\approx \\frac{b-a}{6} \\left( f(a) + 4f\\left(\\frac{a+b}{2}\\right) + f(b) \\right)$.",
+      "hint": "Utilise une approximation parabolique (polynôme de degré 2).",
+      "tag": "Méthode de Simpson"
+    },
+    {
+      "id": 34,
+      "question": "Pourquoi découpe-t-on l'intervalle en $n$ sous-intervalles dans les méthodes composites (trapèzes ou Simpson) ?",
+      "answer": "Pour augmenter drastiquement la précision de l'approximation en appliquant la formule de quadrature élémentaire sur des petits morceaux.",
+      "hint": "Somme de plusieurs petites approximations pour plus de fidélité.",
+      "tag": "Intégration Composée"
+    },
+    {
+      "id": 35,
+      "question": "Qu'est-ce qu'une équation différentielle ordinaire (EDO) en analyse numérique ?",
+      "answer": "Une équation reliant une fonction inconnue de la variable temps $y(t)$ et ses dérivées successives, avec généralement une condition initiale $y(t_0) = y_0$.",
+      "hint": "Évolution d'un système dynamique en fonction du temps.",
+      "tag": "Équations Différentielles"
+    },
+    {
+      "id": 36,
+      "question": "Quel est le principe de la méthode d'Euler explicite pour résoudre $\\frac{dy}{dt} = f(t,y)$ ?",
+      "answer": "Avancer de proche en proche en utilisant la pente donnée par la dérivée au point courant : $y_{k+1} = y_k + h f(t_k, y_k)$, où $h$ est le pas de discrétisation.",
+      "hint": "Méthode pas à pas basée sur la tangente.",
+      "tag": "Méthode d'Euler"
+    },
+    {
+      "id": 37,
+      "question": "Qu'appelle-t-on erreur globale de troncature pour une méthode de résolution d'EDO ?",
+      "answer": "L'écart cumulé entre la solution exacte et la solution numérique à un instant final fixe $T$, lorsque le pas $h$ tend vers 0 ($e_k = |y(t_k) - y_k|$).",
+      "hint": "Somme des erreurs commises à chaque pas jusqu'au temps final.",
+      "tag": "Erreurs EDO"
+    },
+    {
+      "id": 38,
+      "question": "Qu'est-ce que la stabilité d'une méthode de résolution d'EDO ?",
+      "answer": "La propriété qui garantit que de petites perturbations sur les données initiales ou les erreurs d'arrondi ne s'amplifient pas de manière exponentielle au fil des itérations.",
+      "hint": "L'erreur ne doit pas exploser au cours du temps.",
+      "tag": "Stabilité EDO"
+    },
+    {
+      "id": 39,
+      "question": "Quel est l'intérêt principal des méthodes de Runge-Kutta d'ordre supérieur (comme RK4) par rapport à Euler ?",
+      "answer": "Elles offrent une précision beaucoup plus élevée (erreur en $O(h^4)$ au lieu de $O(h)$ pour Euler) en évaluant la pente $f(t,y)$ en plusieurs points intermédiaires à l'intérieur de chaque pas de temps : $y_{k+1} = y_k + \\frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)$.",
+      "hint": "Évaluation de la pente à plusieurs sous-points pour une précision redoutable.",
+      "tag": "Runge-Kutta"
+    },
+    {
+      "id": 40,
+      "question": "Qu'est-ce qu'une méthode implicite (ex: Euler implicite) par opposition à une méthode explicite ?",
+      "answer": "Une méthode où la valeur future $y_{k+1}$ apparaît à la fois du côté gauche et du côté droit de l'équation, ce qui nécessite de résoudre une équation (souvent non linéaire) à chaque pas de temps.",
+      "hint": "Demande une résolution algébrique à chaque étape, mais offre une meilleure stabilité.",
+      "tag": "Méthodes Implicites"
+    }
+  ]
+}
