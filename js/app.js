@@ -168,54 +168,14 @@
     // Built-in fallback so the app works even if opened directly with double-click without a server!
     state.catalogs = [
       {
-        "id": "ecoconception-cours-1",
-        "title": "Écoconception - Cours 1 (L'Homme par nature)",
-        "description": "Retrouvez les notions clés, définitions et concepts abordés lors du premier cours d'écoconception.",
-        "category": "Écologie & Ingénierie",
-        "icon": "🌱",
-        "file": "data/decks/ecoconception-cours-1.json",
-        "tags": ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
-        "difficulty": "Cours"
-      },
-      {
-        id: "git-essentiel",
-        title: "Commandes Git Essentielles",
-        description: "Les commandes indispensables pour maîtriser Git, ses branches et son historique.",
-        category: "Développement",
-        icon: "⚡",
-        file: "data/decks/git-essentiel.json",
-        tags: ["Git", "Terminal", "DevOps"],
-        difficulty: "Intermédiaire"
-      },
-      {
-        id: "espagnol-voyage",
-        title: "Espagnol pour le Voyage",
-        description: "Vocabulaire, formules de politesse et expressions clés indispensables pour voyager.",
-        category: "Langues",
-        icon: "🇪🇸",
-        file: "data/decks/espagnol-voyage.json",
-        tags: ["Espagnol", "Voyage", "Vocabulaire"],
-        difficulty: "Débutant"
-      },
-      {
-        id: "capitales-monde",
-        title: "Capitales du Monde",
-        description: "Testez et enrichissez vos connaissances géographiques avec les capitales de tous les continents.",
-        category: "Géographie",
-        icon: "🌍",
-        file: "data/decks/capitales-monde.json",
-        tags: ["Géographie", "Culture G", "Monde"],
-        difficulty: "Moyen"
-      },
-      {
-        id: "javascript-quiz",
-        title: "JavaScript Moderne (ES6+)",
-        description: "Les notions fondamentales du JavaScript moderne : closures, promesses, types et syntaxe ES6.",
-        category: "Développement",
-        icon: "💛",
-        file: "data/decks/javascript-quiz.json",
-        tags: ["JavaScript", "Web", "Frontend"],
-        difficulty: "Avancé"
+        id: "ecoconception-cours-1",
+        title: "Écoconception - Cours 1 (L'Homme par nature)",
+        description: "Retrouvez les notions clés, définitions et concepts abordés lors du premier cours d'écoconception.",
+        category: "Écologie & Ingénierie",
+        icon: "🌱",
+        file: "data/decks/ecoconception-cours-1.json",
+        tags: ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
+        difficulty: "Cours"
       }
     ];
 
