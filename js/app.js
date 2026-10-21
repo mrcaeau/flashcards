@@ -182,10 +182,22 @@
         title: "Écoconception - Cours 2 (Cycle de vie et Méthodologie ACV)",
         description: "Approfondissement des méthodologies d'analyse, des étapes du cycle de vie et des indicateurs d'impacts environnementaux.",
         category: "Écologie & Ingénierie",
-        icon: "🔄",
+        icon: "🌱",
         file: "data/decks/ecoconception-cours-2.json",
+        cardsCount: 20,
         tags: ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
         difficulty: "Cours"
+      },
+      {
+        id: "optimisation-recherche-operationnelle",
+        title: "Optimisation & Recherche Opérationnelle",
+        description: "Fiche de révision sur l'optimisation libre, la convexité, les multiplicateurs de Lagrange et les conditions du second ordre.",
+        category: "Mathématiques & Recherche Opérationnelle",
+        icon: "📈",
+        file: "data/decks/optimisation-recherche-operationnelle.json",
+        cardsCount: 20,
+        tags: ["Optimisation", "Lagrange", "Hessienne", "Convexité"],
+        difficulty: "Avancé"
       }
     ];
 
@@ -422,6 +434,8 @@
 
     DOM.cardQuestionText.textContent = frontText;
     DOM.cardAnswerText.textContent = backText;
+    renderMath(DOM.cardQuestionText);
+    renderMath(DOM.cardAnswerText);
 
     DOM.cardFrontTag.textContent = currentCard.tag || (state.isInverted ? 'Réponse' : 'Question');
     DOM.cardBackTag.textContent = state.isInverted ? 'Question originale' : 'Explication';
@@ -430,6 +444,7 @@
     if (currentCard.hint && !state.isInverted) {
       DOM.btnToggleHint.hidden = false;
       DOM.cardHintText.textContent = currentCard.hint;
+      renderMath(DOM.cardHintText);
       DOM.cardHintContainer.hidden = true;
     } else {
       DOM.btnToggleHint.hidden = true;
@@ -438,6 +453,23 @@
 
     // Previous / Next buttons state
     DOM.btnPrevCard.disabled = state.currentIndex === 0;
+  }
+
+  function renderMath(element) {
+    if (!element) return;
+    if (typeof window.renderMathInElement === 'function') {
+      try {
+        window.renderMathInElement(element, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
+          ],
+          throwOnError: false
+        });
+      } catch (err) {
+        // Fallback silently if math rendering encounters an issue
+      }
+    }
   }
 
   function flipCard() {

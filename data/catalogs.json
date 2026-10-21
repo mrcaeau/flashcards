@@ -32,6 +32,22 @@
         "ACV"
       ],
       "difficulty": "Cours"
+    },
+    {
+      "id": "optimisation-recherche-operationnelle",
+      "title": "Optimisation & Recherche Opérationnelle",
+      "description": "Fiche de révision sur l'optimisation libre, la convexité, les multiplicateurs de Lagrange et les conditions du second ordre.",
+      "category": "Mathématiques & Recherche Opérationnelle",
+      "icon": "📈",
+      "file": "data/decks/optimisation-recherche-operationnelle.json",
+      "cardsCount": 20,
+      "tags": [
+        "Optimisation",
+        "Lagrange",
+        "Hessienne",
+        "Convexité"
+      ],
+      "difficulty": "Avancé"
     }
   ]
 }

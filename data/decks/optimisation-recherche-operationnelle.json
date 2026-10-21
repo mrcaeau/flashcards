@@ -1,0 +1,150 @@
+{
+  "id": "optimisation-recherche-operationnelle",
+  "title": "Optimisation & Recherche Opérationnelle",
+  "description": "Fiche de révision sur l'optimisation libre, la convexité, les multiplicateurs de Lagrange et les conditions du second ordre.",
+  "category": "Mathématiques & Recherche Opérationnelle",
+  "icon": "📈",
+  "language": "fr-FR",
+  "cards": [
+    {
+      "id": 1,
+      "question": "Qu'est-ce qu'un problème général d'optimisation ?",
+      "answer": "Chercher à optimiser une fonction objectif $f:E\\rightarrow\\mathbb{R}$ en trouvant $x^{*}$ tel que $f(x^{*})\\ge f(x)$ $\\forall x\\in E$ (maximisation) ou $f(x^{*})\\le f(x)$ $\\forall x\\in E$ (minimisation).",
+      "hint": "Il s'agit de trouver un optimum global ou local sous forme de max ou de min.",
+      "tag": "Généralités"
+    },
+    {
+      "id": 2,
+      "question": "Comment définit-on le gradient d'une fonction $f(x_1,...,x_n)$ ?",
+      "answer": "Le vecteur colonne des dérivées partielles premières : $\\nabla f(x)=\\begin{pmatrix}\\frac{\\partial f}{\\partial x_{1}}\\\\ \\vdots\\\\ \\frac{\\partial f}{\\partial x_{n}}\\end{pmatrix}$.",
+      "hint": "Dérivées partielles de premier ordre empilées.",
+      "tag": "Outils mathématiques"
+    },
+    {
+      "id": 3,
+      "question": "Quelle est la structure de la matrice hessienne $H(x)$ pour une fonction à deux variables $f(x,y)$ (sous réserve de $f\\in C^2$) ?",
+      "answer": "$H(x,y)=\\nabla^{2}f(x,y)=\\begin{pmatrix}f_{xx}&f_{xy}\\\\ f_{yx}&f_{yy}\\end{pmatrix}$ avec $f_{xy}=f_{yx}$ (théorème de Schwarz).",
+      "hint": "Matrice carrée symétrique des dérivées secondes.",
+      "tag": "Outils mathématiques"
+    },
+    {
+      "id": 4,
+      "question": "Quels sont les critères en dimension 2 avec la méthode rapide (déterminant et trace de la Hessienne) pour une matrice symétrique $H=\\begin{pmatrix}a & b \\\\ b & c\\end{pmatrix}$ ?",
+      "answer": "1. $\\det(H)>0$ et $\\text{tr}(H)>0 \\implies$ définie positive (min local).\n2. $\\det(H)>0$ et $\\text{tr}(H)<0 \\implies$ définie négative (max local).\n3. $\\det(H)<0 \\implies$ non définie (point selle).",
+      "hint": "Regarder $\\det(H) = ac - b^2$ et $\\text{tr}(H) = a + c$.",
+      "tag": "Hessienne & Signe"
+    },
+    {
+      "id": 5,
+      "question": "Qu'est-ce qu'un ensemble convexe $S \\subset \\mathbb{R}^n$ ?",
+      "answer": "Un ensemble où pour tout $x,y\\in S$ et tout $t\\in[0,1]$, le segment $tx+(1-t)y$ reste entièrement dans $S$.",
+      "hint": "Intuition : le segment reliant deux points de l'ensemble n'en sort jamais.",
+      "tag": "Convexité"
+    },
+    {
+      "id": 6,
+      "question": "Quelle est la définition mathématique d'une fonction convexe sur un ensemble convexe $S$ ?",
+      "answer": "$f(tx+(1-t)y)\\le tf(x)+(1-t)f(y)$ pour tout $x,y\\in S$ et $t\\in[0,1]$.",
+      "hint": "La corde est au-dessus de la courbe.",
+      "tag": "Convexité"
+    },
+    {
+      "id": 7,
+      "question": "Quel est le lien entre la Hessienne et la convexité/concavité d'une fonction $f \\in C^2$ sur un domaine convexe $S$ ?",
+      "answer": "- $f$ convexe $\\iff H(x)$ semi-définie positive $\\forall x\\in S$.\n- $f$ strictement convexe $\\iff H(x)$ définie positive $\\forall x\\in S$ (et réciproquement pour concave avec semi-définie / définie négative).",
+      "hint": "Regarder le signe de la matrice hessienne sur tout le domaine.",
+      "tag": "Convexité"
+    },
+    {
+      "id": 8,
+      "question": "Quelles sont les propriétés fondamentales des fonctions convexes ?",
+      "answer": "1. Une somme de fonctions convexes est convexe.\n2. Si $f$ est convexe, $kf$ est convexe pour $k>0$.\n3. Si $f$ est convexe, $-f$ est concave.\n4. Une fonction affine est à la fois convexe et concave.",
+      "hint": "Penser aux règles de stabilité par combinaison linéaire.",
+      "tag": "Convexité"
+    },
+    {
+      "id": 9,
+      "question": "Quelle est la Condition Nécessaire du Premier Ordre (CN1) pour un optimum libre en un point intérieur $x^*$ ?",
+      "answer": "$\\nabla f(x^{*})=0$. Les solutions sont appelées points critiques, candidats ou stationnaires.",
+      "hint": "Le gradient s'annule à l'optimum intérieur.",
+      "tag": "Optimisation libre"
+    },
+    {
+      "id": 10,
+      "question": "Quelles sont les Conditions Suffisantes du Second Ordre (CS2) pour un point stationnaire $x^*$ en optimisation libre ?",
+      "answer": "- $H(x^{*})$ définie positive $\\implies$ minimum local.\n- $H(x^{*})$ définie négative $\\implies$ maximum local.\n- $H(x^{*})$ non définie $\\implies$ point selle.",
+      "hint": "Basé sur le caractère défini de la matrice hessienne au point critique.",
+      "tag": "Optimisation libre"
+    },
+    {
+      "id": 11,
+      "question": "Que peut-on conclure si la Hessienne en un point stationnaire est seulement semi-définie (positive ou négative) ?",
+      "answer": "On ne peut pas conclure avec le critère du second ordre standard ; il faut faire une étude locale plus poussée (ex. développement de Taylor).",
+      "hint": "Le test standard est insuffisant dans ce cas limite.",
+      "tag": "Optimisation libre"
+    },
+    {
+      "id": 12,
+      "question": "Quel résultat global apporte la convexité (ou concavité) globale pour un point stationnaire ?",
+      "answer": "Si $f$ est convexe partout et $\\nabla f(x^*)=0$, alors $x^*$ est un minimum global. Si $f$ est concave partout et $\\nabla f(x^*)=0$, c'est un maximum global.",
+      "hint": "La convexité globale transforme un point stationnaire en optimum global.",
+      "tag": "Optimum global"
+    },
+    {
+      "id": 13,
+      "question": "Pourquoi ne peut-on pas toujours utiliser $\\nabla f(x^*)=0$ en présence de contraintes ?",
+      "answer": "Parce qu'un optimum peut se situer sur la frontière du domaine contraint (ex: minimiser $x^2$ sous $x\\ge 1$ donne $x^*=1$ mais $f'(1)=2\\neq 0$).",
+      "hint": "Penser au cas de la frontière où la dérivée ne s'annule pas.",
+      "tag": "Optimisation sous contraintes"
+    },
+    {
+      "id": 14,
+      "question": "Comment définit-on le Lagrangien $L(x,\\lambda)$ pour un problème avec $p$ contraintes d'égalité $g_i(x)=0$ ?",
+      "answer": "$L(x,\\lambda) = f(x) - \\sum_{i=1}^{p} \\lambda_i g_i(x)$ où les $\\lambda_i$ sont les multiplicateurs de Lagrange.",
+      "hint": "Fonction objectif moins la somme des multiplicateurs multipliés par les contraintes.",
+      "tag": "Lagrangien"
+    },
+    {
+      "id": 15,
+      "question": "Quels systèmes d'équations forment la CN1 sous contraintes d'égalité pour un point candidat $(x^*, \\lambda^*)$ ?",
+      "answer": "$\\nabla_x L(x^*, \\lambda^*) = 0$ et $g_i(x^*) = 0$ pour tout $i=1,...,p$.",
+      "hint": "Annulation des dérivées partielles du Lagrangien par rapport à $x$ et respect des contraintes.",
+      "tag": "Lagrangien"
+    },
+    {
+      "id": 16,
+      "question": "Quelle est l'interprétation économique d'un multiplicateur de Lagrange $\\lambda_i$ associé à une contrainte de type $h(x)=c$ ?",
+      "answer": "$\\lambda$ donne, au signe près, une approximation de la variation de la fonction objectif lorsqu'on augmente la ressource ou la contrainte $c$ d'une unité (coût marginal / valeur marginale).",
+      "hint": "Sensibilité de l'optimum face à une variation de la contrainte.",
+      "tag": "Lagrangien"
+    },
+    {
+      "id": 17,
+      "question": "Quelles sont les conditions de qualification des contraintes pour appliquer la méthode du Lagrangien ?",
+      "answer": "1. La matrice jacobienne des contraintes $J_g(x^*)$ est de rang maximal $p$.\n2. Ou bien toutes les fonctions contraintes sont linéaires.",
+      "hint": "Garantit que les contraintes ne sont pas contradictoires au point étudié.",
+      "tag": "Qualification"
+    },
+    {
+      "id": 18,
+      "question": "En quoi consiste la méthode des directions pour l'étude du second ordre sous contraintes ?",
+      "answer": "On étudie le signe de la forme quadratique $V^T D_x^2 L(x^*, \\lambda^* ) V$ pour toutes les directions admissibles $V$ non nulles telles que $J_g(x^*)V = 0$.",
+      "hint": "Regarder la Hessienne du Lagrangien restreinte aux directions du noyau de la jacobienne.",
+      "tag": "Second ordre contraint"
+    },
+    {
+      "id": 19,
+      "question": "Comment est structurée la matrice Hessienne bordée $H_B$ pour un problème avec $p$ contraintes ?",
+      "answer": "$H_B = \\begin{pmatrix} 0_{p\\times p} & J_g \\\\ J_g^T & D_x^2 L \\end{pmatrix}$ de taille $(p+n) \\times (p+n)$.",
+      "hint": "Blocs de zéros, jacobiennes des contraintes et hessienne du Lagrangien.",
+      "tag": "Hessienne bordée"
+    },
+    {
+      "id": 20,
+      "question": "Quels sont les critères de signe des mineurs principaux diagonaux de $H_B$ pour un minimum et un maximum local sous contraintes ?",
+      "answer": "- Minimum local : les $n-p$ derniers mineurs principaux diagonaux ont tous le signe de $(-1)^p$.\n- Maximum local : les $n-p$ derniers mineurs principaux diagonaux alternent de signe, le dernier ayant le signe de $(-1)^n$.",
+      "hint": "Règle des derniers mineurs de la Hessienne bordée.",
+      "tag": "Hessienne bordée"
+    }
+  ]
+}
