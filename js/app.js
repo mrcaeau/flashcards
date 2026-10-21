@@ -127,15 +127,14 @@
     const savedTheme = localStorage.getItem('fc_theme');
     if (savedTheme) {
       document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      document.documentElement.setAttribute('data-theme', 'light');
     } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      // Default to Natural Minimalist light palette
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   }
 
   function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('fc_theme', next);
@@ -215,16 +214,29 @@
   }
 
   // =========================================================================
-  // VIEW SWITCHING
+  // VIEW SWITCHING (Strict Full-Page Experience)
   // =========================================================================
   function switchView(viewName) {
-    DOM.viewCatalogs.hidden = viewName !== 'catalogs';
-    DOM.viewStudy.hidden = viewName !== 'study';
-    DOM.viewSummary.hidden = viewName !== 'summary';
+    const views = [
+      { name: 'catalogs', el: DOM.viewCatalogs },
+      { name: 'study', el: DOM.viewStudy },
+      { name: 'summary', el: DOM.viewSummary }
+    ];
 
-    if (viewName === 'catalogs') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    views.forEach(({ name, el }) => {
+      const isCurrent = (viewName === name);
+      if (isCurrent) {
+        el.classList.add('active');
+        el.hidden = false;
+        el.style.display = (name === 'study') ? 'flex' : 'block';
+      } else {
+        el.classList.remove('active');
+        el.hidden = true;
+        el.style.display = 'none';
+      }
+    });
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
   // =========================================================================
@@ -300,40 +312,32 @@
     }
 
     DOM.catalogGrid.innerHTML = filtered.map(catalog => {
-      const tagsHtml = (catalog.tags || []).map(t => `<span class="tag-pill">#${escapeHtml(t)}</span>`).join('');
       const cardsCountText = catalog.cardsCount ? `${catalog.cardsCount} cartes` : 'Catalogue JSON';
-      const isCustom = catalog.isCustom ? `<span class="badge" style="background:rgba(217,70,239,0.15);color:#f472b6;border:1px solid rgba(217,70,239,0.3)">Local</span>` : '';
+      const isCustom = catalog.isCustom ? `<span class="badge" style="color:var(--accent-repeat);">Local</span>` : '';
 
       return `
         <div class="deck-card" data-deck-id="${escapeHtml(catalog.id)}">
           <div class="deck-card-top">
-            <div class="deck-icon-badge">${catalog.icon || '📖'}</div>
+            <span class="badge">${escapeHtml(catalog.category || 'Général')}</span>
             <div class="deck-badges">
-              <span class="badge badge-category">${escapeHtml(catalog.category || 'Général')}</span>
-              ${catalog.difficulty ? `<span class="badge badge-difficulty">${escapeHtml(catalog.difficulty)}</span>` : ''}
               ${isCustom}
+              <span class="deck-icon-badge">${catalog.icon || '📖'}</span>
             </div>
           </div>
 
           <div class="deck-card-content">
             <h3 class="deck-card-title">${escapeHtml(catalog.title)}</h3>
-            <p class="deck-card-desc">${escapeHtml(catalog.description || 'Cliquez pour réviser cette collection de cartes.')}</p>
-            ${tagsHtml ? `<div class="deck-tags-list">${tagsHtml}</div>` : ''}
+            <p class="deck-card-desc">${escapeHtml(catalog.description || '')}</p>
           </div>
 
           <div class="deck-card-footer">
-            <div class="deck-card-stats">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/>
-              </svg>
-              <span>${cardsCountText}</span>
-            </div>
-            <button class="btn-start-deck">
+            <span>${cardsCountText}</span>
+            <span class="btn-start-deck">
               <span>Étudier</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </button>
+            </span>
           </div>
         </div>
       `;
