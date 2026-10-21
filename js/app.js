@@ -195,7 +195,7 @@
         category: "Mathématiques & Recherche Opérationnelle",
         icon: "📈",
         file: "data/decks/optimisation-recherche-operationnelle.json",
-        cardsCount: 20,
+        cardsCount: 35,
         tags: ["Optimisation", "Lagrange", "Hessienne", "Convexité"],
         difficulty: "Avancé"
       }

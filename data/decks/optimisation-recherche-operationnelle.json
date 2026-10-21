@@ -145,6 +145,111 @@
       "answer": "- Minimum local : les $n-p$ derniers mineurs principaux diagonaux ont tous le signe de $(-1)^p$.\n- Maximum local : les $n-p$ derniers mineurs principaux diagonaux alternent de signe, le dernier ayant le signe de $(-1)^n$.",
       "hint": "Règle des derniers mineurs de la Hessienne bordée.",
       "tag": "Hessienne bordée"
+    },
+    {
+      "id": 21,
+      "question": "Que veut dire une trace positive et un déterminant positif pour la Hessienne en un point critique ?",
+      "answer": "La fonction a des courbures positives dans toutes les directions (les valeurs propres sont strictement positives). C'est un minimum local (fond de cuvette).",
+      "hint": "Penser à une parabole orientée vers le haut dans toutes les directions.",
+      "tag": "Interprétation Hessienne"
+    },
+    {
+      "id": 22,
+      "question": "Que veut dire une trace négative et un déterminant positif pour la Hessienne en un point critique ?",
+      "answer": "La fonction a des courbures négatives dans toutes les directions (les valeurs propres sont strictement négatives). C'est un maximum local (sommet d'une colline).",
+      "hint": "Penser à une cloche ou un dôme.",
+      "tag": "Interprétation Hessienne"
+    },
+    {
+      "id": 23,
+      "question": "Que veut dire un déterminant négatif (quel que soit le signe de la trace) pour la Hessienne en un point critique ?",
+      "answer": "La fonction se courbe vers le haut dans certaines directions et vers le bas dans d'autres (valeurs propres de signes opposés). C'est un point selle (forme de selle de cheval).",
+      "hint": "La surface monte d'un côté et descend de l'autre.",
+      "tag": "Interprétation Hessienne"
+    },
+    {
+      "id": 24,
+      "question": "Que se passe-t-il si le déterminant de la Hessienne est nul ($\\det(H) = 0$) en un point critique ?",
+      "answer": "Le test du second ordre est indécis : il y a une direction « plate » ou une courbure nulle. On ne peut pas conclure directement avec la matrice hessienne.",
+      "hint": "Le test standard échoue, il faut regarder les termes d'ordre supérieur (Taylor).",
+      "tag": "Cas Limites"
+    },
+    {
+      "id": 25,
+      "question": "Quel est le lien direct entre le déterminant d'une matrice 2x2 et ses valeurs propres ?",
+      "answer": "Le déterminant est égal au produit des valeurs propres ($\\det(H) = \\lambda_1 \\lambda_2$).",
+      "hint": "Si le déterminant est positif, les deux valeurs propres ont le même signe.",
+      "tag": "Algèbre Linéaire"
+    },
+    {
+      "id": 26,
+      "question": "Quel est le lien direct entre la trace d'une matrice 2x2 et ses valeurs propres ?",
+      "answer": "La trace est égale à la somme des valeurs propres ($\\text{tr}(H) = \\lambda_1 + \\lambda_2$).",
+      "hint": "Si la trace est positive, la somme des courbures principales est positive.",
+      "tag": "Algèbre Linéaire"
+    },
+    {
+      "id": 27,
+      "question": "Pourquoi un déterminant positif combiné à une trace positive garantit-il un minimum local ?",
+      "answer": "Puisque $\\det(H) = \\lambda_1 \\lambda_2 > 0$, $\\lambda_1$ et $\\lambda_2$ sont de même signe. Puisque $\\text{tr}(H) = \\lambda_1 + \\lambda_2 > 0$, leur somme est positive, donc les deux valeurs propres sont obligatoirement strictement positives.",
+      "hint": "Produit positif + somme positive = deux termes positifs.",
+      "tag": "Démonstration"
+    },
+    {
+      "id": 28,
+      "question": "Pourquoi un déterminant positif combiné à une trace négative garantit-il un maximum local ?",
+      "answer": "Puisque $\\det(H) > 0$, $\\lambda_1$ et $\\lambda_2$ sont de même signe. Puisque $\\text{tr}(H) < 0$, leur somme est négative, donc les deux valeurs propres sont obligatoirement strictement négatives.",
+      "hint": "Produit positif + somme négative = deux termes négatifs.",
+      "tag": "Démonstration"
+    },
+    {
+      "id": 29,
+      "question": "Pourquoi un déterminant négatif implique-t-il forcément un point selle ?",
+      "answer": "Puisque $\\det(H) = \\lambda_1 \\lambda_2 < 0$, le produit des valeurs propres est négatif, ce qui signifie qu'elles sont de signes strictement opposés (l'une positive, l'autre négative).",
+      "hint": "Des courbures de signes opposés créent une structure en col de montagne.",
+      "tag": "Démonstration"
+    },
+    {
+      "id": 30,
+      "question": "Quelle est l'analogie physique d'un point critique où la Hessienne est définie positive (min local) ?",
+      "answer": "Une bille posée au fond d'un bol. Si on la déplace légèrement dans n'importe quelle direction, elle revient naturellement vers sa position initiale.",
+      "hint": "Position d'équilibre stable.",
+      "tag": "Intuition Physique"
+    },
+    {
+      "id": 31,
+      "question": "Quelle est l'analogie physique d'un point critique où la Hessienne est définie négative (max local) ?",
+      "answer": "Une bille en équilibre précaire au sommet d'une colline arrondie. La moindre pichenette dans n'importe quelle direction la fait dévaler la pente.",
+      "hint": "Position d'équilibre instable.",
+      "tag": "Intuition Physique"
+    },
+    {
+      "id": 32,
+      "question": "Quelle est l'analogie physique d'un point selle (déterminant négatif) ?",
+      "answer": "Une bille placée au milieu d'un col de montagne : elle est stable si on essaie de monter sur les flancs de la vallée, mais elle bascule immédiatement si on la pousse dans l'axe du col.",
+      "hint": "Stable dans une direction, instable dans l'autre.",
+      "tag": "Intuition Physique"
+    },
+    {
+      "id": 33,
+      "question": "Que représente géométriquement la dérivée seconde $f''(x)$ en dimension 1 par rapport à la Hessienne en dimension 2 ?",
+      "answer": "En dimension 1, le signe de $f''(x)$ indique la concavité (positif = convexe/min, négatif = concave/max). En dimension 2, la Hessienne généralise cette notion de courbure dans toutes les directions de l'espace.",
+      "hint": "La Hessienne est l'extension multidimensionnelle de la dérivée seconde.",
+      "tag": "Géométrie"
+    },
+    {
+      "id": 34,
+      "question": "Est-ce qu'un minimum local peut exister en un point où la Hessienne est semi-définie positive ?",
+      "answer": "Oui, c'est possible mais non garanti par le test du second ordre standard (ex: $f(x,y) = x^4 + y^4$ en $(0,0)$ a une hessienne nulle partout sur l'origine mais c'est un minimum global strict).",
+      "hint": "Le cas semi-défini laisse la porte ouverte à un minimum ou à un point selle selon les ordres supérieurs.",
+      "tag": "Pièges & Nuances"
+    },
+    {
+      "id": 35,
+      "question": "Que signifie concrètement une matrice hessienne diagonale avec des termes positifs ?",
+      "answer": "Les axes du repère coïncident avec les axes de courbure principale de la surface, et la fonction se comporte comme des paraboles montantes indépendantes sur chaque variable.",
+      "hint": "Pas de termes croisés ($f_{xy} = 0$).",
+      "tag": "Interprétation Géométrique"
     }
   ]
 }
