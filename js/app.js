@@ -146,7 +146,7 @@
   // =========================================================================
   async function loadCatalogsIndex() {
     try {
-      const response = await fetch('data/catalogs.json');
+      const response = await fetch(`data/catalogs.json?t=${Date.now()}`, { cache: 'no-store' });
       if (!response.ok) {
         throw new Error(`HTTP ${response.status} - Erreur de chargement`);
       }
@@ -336,7 +336,7 @@
       } else {
         try {
           showToast('Chargement du catalogue...', 'info');
-          const response = await fetch(catalogMeta.file);
+          const response = await fetch(`${catalogMeta.file}?t=${Date.now()}`, { cache: 'no-store' });
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           deckData = await response.json();
           state.loadedDecks.set(catalogMeta.id, deckData);
