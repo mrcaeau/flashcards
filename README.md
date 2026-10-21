@@ -8,21 +8,17 @@ Hébergeable gratuitement en 1 clic sur **GitHub Pages**, sans build complexe ni
 
 ## 🚀 Mise en ligne sur GitHub Pages (Gratuit et Rapide)
 
-1. **Créez un nouveau dépôt sur GitHub** (ex: `flashcards-app`).
-2. **Poussez ce dossier sur votre dépôt** :
+1. **Le dépôt distant est configuré** : `https://github.com/mrcaeau/flashcards.git`
+2. **Pour pousser vos modifications** :
    ```bash
-   git add .
-   git commit -m "Initial commit - Flashcards Studio"
-   git remote add origin https://github.com/<votre-pseudo>/<votre-depot>.git
    git push -u origin main
    ```
 3. **Activez GitHub Pages** :
-   - Rendez-vous sur votre dépôt GitHub.
-   - Cliquez sur **Settings** (Paramètres) > **Pages** (dans le menu de gauche).
+   - Rendez-vous sur [https://github.com/mrcaeau/flashcards/settings/pages](https://github.com/mrcaeau/flashcards/settings/pages).
    - Sous **Build and deployment > Source**, choisissez **Deploy from a branch**.
    - Sélectionnez la branche **main** et le dossier **/(root)**, puis cliquez sur **Save**.
 4. **Fini !** Votre site sera accessible à l'adresse :
-   `https://<votre-pseudo>.github.io/<votre-depot>/`
+   **[https://mrcaeau.github.io/flashcards/](https://mrcaeau.github.io/flashcards/)**
 
 ---
 
