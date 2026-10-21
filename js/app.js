@@ -171,9 +171,10 @@
         id: "ecoconception-cours-1",
         title: "Écoconception - Cours 1 (L'Homme par nature)",
         description: "Retrouvez les notions clés, définitions et concepts abordés lors du premier cours d'écoconception.",
-        category: "Écologie & Ingénierie",
+        category: "Éco-conception",
         icon: "🌱",
         file: "data/decks/ecoconception-cours-1.json",
+        cardsCount: 18,
         tags: ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
         difficulty: "Cours"
       },
@@ -181,10 +182,10 @@
         id: "ecoconception-cours-2",
         title: "Écoconception - Cours 2 (Cycle de vie et Méthodologie ACV)",
         description: "Approfondissement des méthodologies d'analyse, des étapes du cycle de vie et des indicateurs d'impacts environnementaux.",
-        category: "Écologie & Ingénierie",
+        category: "Éco-conception",
         icon: "🌱",
         file: "data/decks/ecoconception-cours-2.json",
-        cardsCount: 20,
+        cardsCount: 18,
         tags: ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
         difficulty: "Cours"
       },
@@ -192,12 +193,23 @@
         id: "optimisation-recherche-operationnelle",
         title: "Optimisation & Recherche Opérationnelle",
         description: "Fiche de révision sur l'optimisation libre, la convexité, les multiplicateurs de Lagrange et les conditions du second ordre.",
-        category: "Mathématiques & Recherche Opérationnelle",
-        icon: "📈",
+        category: "Optimisation et recherche opérationnelle",
+        icon: "⚙️",
         file: "data/decks/optimisation-recherche-operationnelle.json",
         cardsCount: 35,
         tags: ["Optimisation", "Lagrange", "Hessienne", "Convexité"],
         difficulty: "Avancé"
+      },
+      {
+        id: "methodes-numeriques-chap1-2",
+        title: "Méthodes Numériques - Chapitres 1 et 2",
+        description: "Deck complet d'une quarantaine de cartes couvrant l'intégralité des notions abordées dans les chapitres 1 et 2 de méthodes numériques.",
+        category: "Méthodes numériques",
+        icon: "📊",
+        file: "data/decks/methodes-numeriques-chap1-2.json",
+        cardsCount: 40,
+        tags: ["Méthodes Numériques", "Newton-Raphson", "Gauss & LU", "Interpolation", "Intégration", "EDO"],
+        difficulty: "Intermédiaire"
       }
     ];
 
