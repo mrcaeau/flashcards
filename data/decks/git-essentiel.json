@@ -1,0 +1,80 @@
+{
+  "id": "git-essentiel",
+  "title": "Commandes Git Essentielles",
+  "description": "Les commandes indispensables pour maîtriser Git, ses branches et son historique.",
+  "category": "Développement",
+  "icon": "⚡",
+  "language": "fr-FR",
+  "cards": [
+    {
+      "id": 1,
+      "question": "Comment créer une nouvelle branche et basculer dessus immédiatement ?",
+      "answer": "git checkout -b <nom-branche>\n\nOu avec la commande moderne :\ngit switch -c <nom-branche>",
+      "hint": "Pense à l'option -b ou au verbe switch",
+      "tag": "Branches"
+    },
+    {
+      "id": 2,
+      "question": "Quelle commande permet d'annuler le dernier commit tout en conservant les modifications dans l'espace de travail ?",
+      "answer": "git reset --soft HEAD~1",
+      "hint": "--soft conserve les changements indexés, --mixed les remet non indexés",
+      "tag": "Historique"
+    },
+    {
+      "id": 3,
+      "question": "Comment mettre de côté des modifications non commitées pour travailler sur autre chose ?",
+      "answer": "git stash\n\n(Pour les récupérer plus tard : git stash pop)",
+      "hint": "Terme anglais signifiant 'planquer' ou 'remiser'",
+      "tag": "Stash"
+    },
+    {
+      "id": 4,
+      "question": "Quelle commande permet d'inspecter l'historique sous forme de graphe compact sur une seule ligne ?",
+      "answer": "git log --oneline --graph --all",
+      "hint": "Combine --oneline et --graph",
+      "tag": "Historique"
+    },
+    {
+      "id": 5,
+      "question": "Comment modifier le message du dernier commit sans créer de nouveau commit ?",
+      "answer": "git commit --amend -m \"Nouveau message\"",
+      "hint": "Pense au terme anglais 'amend'",
+      "tag": "Commits"
+    },
+    {
+      "id": 6,
+      "question": "Comment récupérer et intégrer les changements d'une branche distante en rejouant ses propres commits au sommet ?",
+      "answer": "git pull --rebase origin <branche>",
+      "hint": "Évite les 'merge commits' superflus",
+      "tag": "Synchronisation"
+    },
+    {
+      "id": 7,
+      "question": "Quelle commande permet de supprimer une branche locale en toute sécurité (seulement si déjà fusionnée) ?",
+      "answer": "git branch -d <nom-branche>\n\n(Utiliser -D pour forcer la suppression)",
+      "hint": "-d minuscule pour la sécurité",
+      "tag": "Branches"
+    },
+    {
+      "id": 8,
+      "question": "Comment afficher les différences entre le dossier de travail et le dernier commit (ou l'index) ?",
+      "answer": "git diff\n(pour les fichiers déjà ajoutés au staging : git diff --staged ou --cached)",
+      "hint": "différence",
+      "tag": "Inspection"
+    },
+    {
+      "id": 9,
+      "question": "Comment appliquer un commit spécifique provenant d'une autre branche ?",
+      "answer": "git cherry-pick <hash-du-commit>",
+      "hint": "L'image de cueillir des cerises",
+      "tag": "Avancé"
+    },
+    {
+      "id": 10,
+      "question": "Comment supprimer un fichier du suivi Git tout en le conservant sur le disque local ?",
+      "answer": "git rm --cached <fichier>",
+      "hint": "Option --cached",
+      "tag": "Fichiers"
+    }
+  ]
+}

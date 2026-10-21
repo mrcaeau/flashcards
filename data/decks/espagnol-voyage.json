@@ -1,0 +1,80 @@
+{
+  "id": "espagnol-voyage",
+  "title": "Espagnol pour le Voyage",
+  "description": "Vocabulaire, formules de politesse et expressions clés indispensables pour voyager.",
+  "category": "Langues",
+  "icon": "🇪🇸",
+  "language": "es-ES",
+  "cards": [
+    {
+      "id": 1,
+      "question": "¿Dónde está la estación de tren más cercana?",
+      "answer": "Où se trouve la gare ferroviaire la plus proche ?",
+      "hint": "estación = gare / tren = train",
+      "tag": "Transports"
+    },
+    {
+      "id": 2,
+      "question": "¿Cuánto cuesta esto, por favor?",
+      "answer": "Combien cela coûte-t-il, s'il vous plaît ?",
+      "hint": "cuesta = coûte",
+      "tag": "Achats"
+    },
+    {
+      "id": 3,
+      "question": "¿Podría traerme la cuenta, por favor?",
+      "answer": "Pourriez-vous m'apporter l'addition, s'il vous plaît ?",
+      "hint": "la cuenta = l'addition",
+      "tag": "Restaurant"
+    },
+    {
+      "id": 4,
+      "question": "Disculpe, me he perdido. ¿Me puede ayudar?",
+      "answer": "Excusez-moi, je suis perdu(e). Pouvez-vous m'aider ?",
+      "hint": "perdido = perdu / ayudar = aider",
+      "tag": "Orientation"
+    },
+    {
+      "id": 5,
+      "question": "Tengo una reserva a nombre de...",
+      "answer": "J'ai une réservation au nom de...",
+      "hint": "reserva = réservation",
+      "tag": "Hôtel"
+    },
+    {
+      "id": 6,
+      "question": "¿A qué hora sale el próximo autobús?",
+      "answer": "À quelle heure part le prochain bus ?",
+      "hint": "sale = sort/part",
+      "tag": "Transports"
+    },
+    {
+      "id": 7,
+      "question": "Soy alérgico/a al gluten y a los frutos secos.",
+      "answer": "Je suis allergique au gluten et aux fruits à coque.",
+      "hint": "frutos secos = fruits secs / à coque",
+      "tag": "Santé"
+    },
+    {
+      "id": 8,
+      "question": "¿Dónde está el baño?",
+      "answer": "Où sont les toilettes ?",
+      "hint": "baño = salle de bain / toilettes",
+      "tag": "Quotidien"
+    },
+    {
+      "id": 9,
+      "question": "Muchas gracias por su hospitalidad.",
+      "answer": "Merci beaucoup pour votre hospitalité.",
+      "hint": "hospitalidad = hospitalité",
+      "tag": "Politesse"
+    },
+    {
+      "id": 10,
+      "question": "¿Se puede pagar con tarjeta de crédito?",
+      "answer": "Est-il possible de payer par carte bancaire ?",
+      "hint": "tarjeta = carte",
+      "tag": "Paiement"
+    }
+  ]
+}
