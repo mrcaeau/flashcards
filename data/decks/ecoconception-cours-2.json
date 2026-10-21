@@ -78,69 +78,55 @@
         },
         {
             "id": 11,
-            "question": "Rôle de la norme ISO 14040",
-            "answer": "Elle fixe le cadre général, les principes fondamentaux et les exigences de l'Analyse de Cycle de Vie.",
-            "hint": "Norme internationale de référence pour l'ACV.",
-            "tag": "Normalisation"
-        },
-        {
-            "id": 12,
-            "question": "Rôle de la norme ISO 14044",
-            "answer": "Elle spécifie les exigences et fournit les lignes directrices détaillées pour la réalisation concrète d'une ACV.",
-            "hint": "Complément opérationnel de la norme ISO 14040.",
-            "tag": "Normalisation"
-        },
-        {
-            "id": 13,
             "question": "Qu'est-ce que l'écoconception multicritère ?",
             "answer": "Une approche qui analyse plusieurs catégories d'impacts environnementaux en même temps pour éviter les visions simplistes.",
             "hint": "Ne pas se limiter au seul changement climatique.",
             "tag": "Principes"
         },
         {
-            "id": 14,
+            "id": 12,
             "question": "Qu'appelle-t-on l'analyse des flux de matières (AFM) ?",
             "answer": "Un outil comptable permettant de quantifier l'ensemble des flux de matières entrant, circulant et sortant d'un système.",
             "hint": "Comptabilité physique des flux de ressources.",
             "tag": "Outils"
         },
         {
-            "id": 15,
+            "id": 13,
             "question": "Qu'est-ce qu'une matrice de PAS (Product-Aspect-Strategy) ?",
             "answer": "Un outil d'écoconception qualitatif croisant les étapes du cycle de vie avec les aspects environnementaux pour identifier des pistes d'amélioration.",
             "hint": "Matrice d'écoconception de Brezet et van Hemel.",
             "tag": "Outils"
         },
         {
-            "id": 16,
+            "id": 14,
             "question": "Qu'est-ce que l'écoconception par amélioration (ou refonte) ?",
             "answer": "Démarche consistant à modifier ou optimiser un produit existant pour réduire son empreinte environnementale sans changer radicalement sa fonction.",
             "hint": "Optimisation incrémentale d'un produit classique.",
             "tag": "Stratégies"
         },
         {
-            "id": 17,
+            "id": 15,
             "question": "Qu'est-ce que la rupture en écoconception ?",
             "answer": "Démarche innovante consistant à concevoir un tout nouveau concept ou service pour répondre au même besoin de manière radicalement plus soutenable.",
             "hint": "Changement de paradigme technologique ou d'usage.",
             "tag": "Stratégies"
         },
         {
-            "id": 18,
+            "id": 16,
             "question": "Qu'est-ce que la règle des 3R en gestion des déchets",
             "answer": "Réduire, Réutiliser, Recycler (dans l'ordre de priorité environnementale).",
             "hint": "La réduction à la source reste toujours la solution la plus efficace.",
             "tag": "Fin de vie"
         },
         {
-            "id": 19,
+            "id": 17,
             "question": "Qu'est-ce qu'un écobilan ?",
             "answer": "Terme historiquement utilisé en Suisse et en Europe francophone pour désigner l'Analyse de Cycle de Vie d'un produit.",
             "hint": "Synonyme direct d'ACV dans certains contextes industriels.",
             "tag": "Méthodologie"
         },
         {
-            "id": 20,
+            "id": 18,
             "question": "Pourquoi la phase d'utilisation est-elle souvent prépondérante sur les appareils énergivores ?",
             "answer": "Parce que la consommation d'électricité ou de carburant sur toute la durée de vie cumulée dépasse souvent l'impact initial de la fabrication.",
             "hint": "Exemple typique des appareils électroménagers ou des véhicules thermiques.",

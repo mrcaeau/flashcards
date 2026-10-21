@@ -85,62 +85,48 @@
     },
     {
       "id": 12,
-      "question": "Règle visuelle 20-20-20",
-      "answer": "Toutes les 20 minutes, regarder un objet distant d'au moins 20 pieds (6 mètres) pendant au moins 20 secondes.",
-      "hint": "Règle de repos visuel pour l'utilisation prolongée des écrans.",
-      "tag": "Bien-être"
-    },
-    {
-      "id": 13,
-      "question": "Consignes strictes pour le QCM de début de TD",
-      "answer": "Arriver à l'heure, utiliser uniquement un stylo NOIR ou BLEU, et interdiction absolue d'utiliser un stylo ou crayon effaçable (type FriXion).",
-      "hint": "Attention au risque de points négatifs si non respecté.",
-      "tag": "Consignes"
-    },
-    {
-      "id": 14,
       "question": "Approche symbolique ou sacrée de la nature",
       "answer": "Relation où la nature est perçue à travers le mythe, la religion ou le respect culturel, influençant les interdits et les rites de la communauté.",
       "hint": "Pensez aux dimensions spirituelles et culturelles de la relation à l'environnement.",
       "tag": "Relations Homme-Nature"
     },
     {
-      "id": 15,
+      "id": 13,
       "question": "Définition de l'écoconception",
       "answer": "Intégration de l'environnement dès la conception d'un produit ou d'un service, en prenant en compte l'ensemble de son cycle de vie.",
       "hint": "Allier performance technique, économique et réduction des impacts environnementaux.",
       "tag": "Définitions"
     },
     {
-      "id": 16,
+      "id": 14,
       "question": "Évaluation du cycle de vie (ACV)",
       "answer": "Méthode normalisée (ISO 14040-44) permettant de quantifier les impacts environnementaux potentiels d'un produit de l'extraction des matières premières à sa fin de vie.",
       "hint": "De l'extraction au berceau jusqu'à la tombe.",
       "tag": "Méthodologie"
     },
     {
-      "id": 17,
+      "id": 15,
       "question": "Principe de précaution",
       "answer": "Action face à un risque potentiel grave et irréversible dont l'incertitude scientifique est grande, visant à éviter des dommages disproportionnés.",
       "hint": "Agir même en l'absence de certitude absolue pour prévenir les dommages.",
       "tag": "Principes"
     },
     {
-      "id": 18,
+      "id": 16,
       "question": "Effet de seuil écologique",
       "answer": "Limite critique au-delà de laquelle la dégradation d'un écosystème devient irréversible ou provoque son effondrement brutal.",
       "hint": "Le point de bascule où le système ne peut plus revenir en arrière.",
       "tag": "Écologie"
     },
     {
-      "id": 19,
+      "id": 17,
       "question": "Effet barrière des infrastructures",
       "answer": "Fragmentation des habitats naturels par des routes, des voies ferrées ou des clôtures, empêchant la circulation et le brassage génétique des espèces.",
       "hint": "Ce qui coupe les corridors écologiques en deux.",
       "tag": "Biodiversité"
     },
     {
-      "id": 20,
+      "id": 18,
       "question": "Responsabilité élargie du producteur (REP)",
       "answer": "Principe selon lequel les fabricants d'un produit sont tenus financièrement et techniquement responsables de sa gestion en fin de vie.",
       "hint": "Le pollueur-payeur appliqué à la gestion des déchets post-consommation.",
