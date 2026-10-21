@@ -1,0 +1,150 @@
+{
+  "id": "ecoconception-cours-1",
+  "title": "Écoconception - Cours 1 (L'Homme par nature)",
+  "description": "Retrouvez les notions clés, définitions et concepts abordés lors du premier cours d'écoconception.",
+  "category": "Écologie & Ingénierie",
+  "icon": "🌱",
+  "language": "fr-FR",
+  "cards": [
+    {
+      "id": 1,
+      "question": "Approche utilitariste",
+      "answer": "Relation Homme-Nature où l'Homme exploite directement les ressources naturelles, comme l'agriculture ou la coupe de bois.",
+      "hint": "Pensez à l'action de l'Homme qui prélève ou transforme.",
+      "tag": "Relations Homme-Nature"
+    },
+    {
+      "id": 2,
+      "question": "Approche naturaliste (ou biologique)",
+      "answer": "Relation où la nature rythme et influence le mode de vie humain, comme le cycle des saisons.",
+      "hint": "Pensez à la manière dont l'environnement influence l'Homme.",
+      "tag": "Relations Homme-Nature"
+    },
+    {
+      "id": 3,
+      "question": "Les 3 conditions d'une décision de conception éclairée",
+      "answer": "1. Multi-impacts, 2. Multi-phases du cycle de vie, 3. Appel aux experts.",
+      "hint": "Ce sont les trois piliers obligatoires pour éviter une décision incomplète.",
+      "tag": "Conception"
+    },
+    {
+      "id": 4,
+      "question": "Exemple de décision non éclairée",
+      "answer": "Une décision appliquée au CO2 seulement, limitée aux phases d'utilisation/maintenance seulement, ou prise seul dans son coin.",
+      "hint": "Pensez aux trois pièges à éviter par rapport aux conditions d'éclairage.",
+      "tag": "Conception"
+    },
+    {
+      "id": 5,
+      "question": "Société de service",
+      "answer": "Système où la connaissance et l'expérience sont déportées vers des experts (ex. le boulanger), provoquant la perte de la maîtrise technique par les citoyens.",
+      "hint": "Pensez à l'exemple fil rouge du boulanger.",
+      "tag": "Société"
+    },
+    {
+      "id": 6,
+      "question": "Les 5 grandes causes anthropiques de déclin de la biodiversité",
+      "answer": "1. Habitats détruits, 2. Ressources surexploitées, 3. Climat qui change, 4. Pollutions diverses, 5. Espèces envahissantes.",
+      "hint": "Ce sont les 5 branches principales de l'arbre des causes humaines.",
+      "tag": "Biodiversité"
+    },
+    {
+      "id": 7,
+      "question": "Conséquence des atteintes directes",
+      "answer": "Mortalité et destruction, entraînant la mort des individus ou une baisse de leur reproduction.",
+      "hint": "Effet immédiat sur la vie des individus.",
+      "tag": "Biodiversité"
+    },
+    {
+      "id": 8,
+      "question": "Conséquence des atteintes indirectes",
+      "answer": "Dérangement et dégradation, provoquant la réduction et l'isolement des habitats.",
+      "hint": "Effet sur l'environnement et l'espace de vie.",
+      "tag": "Biodiversité"
+    },
+    {
+      "id": 9,
+      "question": "Stratégie d'adaptation des oiseaux face au bruit urbain",
+      "answer": "Ils chantent plus fort ou plus aigu pour porter plus loin, ou ils se dispersent (partir), ce qui provoque un déclin local.",
+      "hint": "S'adapter ou partir.",
+      "tag": "Biodiversité"
+    },
+    {
+      "id": 10,
+      "question": "Scénario 2 de la reproduction animale en crise",
+      "answer": "Les individus se trouvent sur les sites mais refusent de se reproduire ou abandonnent/tuent leur progéniture (ex. le renard ou le lapin).",
+      "hint": "Comparé au refus d'enfant chez certains humains par écologie.",
+      "tag": "Biodiversité"
+    },
+    {
+      "id": 11,
+      "question": "Posture « Je suis moteur·e » de l'ingénieur·e",
+      "answer": "Action volontaire consistant à aller au-delà de la réglementation et des normes en vigueur dans son métier.",
+      "hint": "Comme imposer un seuil strict sur les microplastiques alors qu'aucune norme n'existe.",
+      "tag": "Posture Professionnelle"
+    },
+    {
+      "id": 12,
+      "question": "Règle visuelle 20-20-20",
+      "answer": "Toutes les 20 minutes, regarder un objet distant d'au moins 20 pieds (6 mètres) pendant au moins 20 secondes.",
+      "hint": "Règle de repos visuel pour l'utilisation prolongée des écrans.",
+      "tag": "Bien-être"
+    },
+    {
+      "id": 13,
+      "question": "Consignes strictes pour le QCM de début de TD",
+      "answer": "Arriver à l'heure, utiliser uniquement un stylo NOIR ou BLEU, et interdiction absolue d'utiliser un stylo ou crayon effaçable (type FriXion).",
+      "hint": "Attention au risque de points négatifs si non respecté.",
+      "tag": "Consignes"
+    },
+    {
+      "id": 14,
+      "question": "Approche symbolique ou sacrée de la nature",
+      "answer": "Relation où la nature est perçue à travers le mythe, la religion ou le respect culturel, influençant les interdits et les rites de la communauté.",
+      "hint": "Pensez aux dimensions spirituelles et culturelles de la relation à l'environnement.",
+      "tag": "Relations Homme-Nature"
+    },
+    {
+      "id": 15,
+      "question": "Définition de l'écoconception",
+      "answer": "Intégration de l'environnement dès la conception d'un produit ou d'un service, en prenant en compte l'ensemble de son cycle de vie.",
+      "hint": "Allier performance technique, économique et réduction des impacts environnementaux.",
+      "tag": "Définitions"
+    },
+    {
+      "id": 16,
+      "question": "Évaluation du cycle de vie (ACV)",
+      "answer": "Méthode normalisée (ISO 14040-44) permettant de quantifier les impacts environnementaux potentiels d'un produit de l'extraction des matières premières à sa fin de vie.",
+      "hint": "De l'extraction au berceau jusqu'à la tombe.",
+      "tag": "Méthodologie"
+    },
+    {
+      "id": 17,
+      "question": "Principe de précaution",
+      "answer": "Action face à un risque potentiel grave et irréversible dont l'incertitude scientifique est grande, visant à éviter des dommages disproportionnés.",
+      "hint": "Agir même en l'absence de certitude absolue pour prévenir les dommages.",
+      "tag": "Principes"
+    },
+    {
+      "id": 18,
+      "question": "Effet de seuil écologique",
+      "answer": "Limite critique au-delà de laquelle la dégradation d'un écosystème devient irréversible ou provoque son effondrement brutal.",
+      "hint": "Le point de bascule où le système ne peut plus revenir en arrière.",
+      "tag": "Écologie"
+    },
+    {
+      "id": 19,
+      "question": "Effet barrière des infrastructures",
+      "answer": "Fragmentation des habitats naturels par des routes, des voies ferrées ou des clôtures, empêchant la circulation et le brassage génétique des espèces.",
+      "hint": "Ce qui coupe les corridors écologiques en deux.",
+      "tag": "Biodiversité"
+    },
+    {
+      "id": 20,
+      "question": "Responsabilité élargie du producteur (REP)",
+      "answer": "Principe selon lequel les fabricants d'un produit sont tenus financièrement et techniquement responsables de sa gestion en fin de vie.",
+      "hint": "Le pollueur-payeur appliqué à la gestion des déchets post-consommation.",
+      "tag": "Réglementation"
+    }
+  ]
+}

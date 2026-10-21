@@ -168,6 +168,16 @@
     // Built-in fallback so the app works even if opened directly with double-click without a server!
     state.catalogs = [
       {
+        "id": "ecoconception-cours-1",
+        "title": "Écoconception - Cours 1 (L'Homme par nature)",
+        "description": "Retrouvez les notions clés, définitions et concepts abordés lors du premier cours d'écoconception.",
+        "category": "Écologie & Ingénierie",
+        "icon": "🌱",
+        "file": "data/decks/ecoconception-cours-1.json",
+        "tags": ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
+        "difficulty": "Cours"
+      },
+      {
         id: "git-essentiel",
         title: "Commandes Git Essentielles",
         description: "Les commandes indispensables pour maîtriser Git, ses branches et son historique.",
