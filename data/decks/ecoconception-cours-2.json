@@ -1,0 +1,150 @@
+{
+    "id": "ecoconception-cours-2",
+    "title": "Écoconception - Cours 2 (Cycle de vie et Méthodologie ACV)",
+    "description": "Approfondissement des méthodologies d'analyse, des étapes du cycle de vie et des indicateurs d'impacts environnementaux.",
+    "category": "Écologie & Ingénierie",
+    "icon": "🔄",
+    "language": "fr-FR",
+    "cards": [
+        {
+            "id": 1,
+            "question": "Définition de l'Analyse de Cycle de Vie (ACV)",
+            "answer": "Méthode normalisée (ISO 14040-44) qui évalue les impacts environnementaux potentiels d'un produit ou service tout au long de son existence.",
+            "hint": "De l'extraction des matières premières jusqu'à la fin de vie.",
+            "tag": "Méthodologie ACV"
+        },
+        {
+            "id": 2,
+            "question": "Première étape du cycle de vie",
+            "answer": "Extraction des matières premières (ou acquisition des ressources naturelles).",
+            "hint": "Le tout début de la chaîne, souvent associé à l'épuisement des ressources.",
+            "tag": "Cycle de vie"
+        },
+        {
+            "id": 3,
+            "question": "Deuxième étape du cycle de vie",
+            "answer": "Fabrication et transformation (production des composants et assemblage du produit).",
+            "hint": "Phase où l'usine transforme les matières premières en produits finis.",
+            "tag": "Cycle de vie"
+        },
+        {
+            "id": 4,
+            "question": "Troisième étape du cycle de vie",
+            "answer": "Distribution et transport (acheminement du produit de l'usine jusqu'au consommateur final).",
+            "hint": "Liée à la logistique, aux emballages et aux modes de transport.",
+            "tag": "Cycle de vie"
+        },
+        {
+            "id": 5,
+            "question": "Quatrième étape du cycle de vie",
+            "answer": "Utilisation, maintenance et service (phase pendant laquelle le produit remplit sa fonction).",
+            "hint": "Souvent la plus longue, générant des consommations d'énergie ou d'eau.",
+            "tag": "Cycle de vie"
+        },
+        {
+            "id": 6,
+            "question": "Cinquième et dernière étape du cycle de vie",
+            "answer": "Fin de vie (gestion des déchets, recyclage, incinération ou mise en décharge).",
+            "hint": "Ce qu'il advient du produit une fois son usage terminé.",
+            "tag": "Cycle de vie"
+        },
+        {
+            "id": 7,
+            "question": "Qu'est-ce qu'une unité fonctionnelle (UF) ?",
+            "answer": "La quantité de référence ou la performance mesurée d'un système pour servir d'unité de comparaison dans une ACV.",
+            "hint": "Permet de comparer des produits comparables sur un service rendu équivalent.",
+            "tag": "Méthodologie ACV"
+        },
+        {
+            "id": 8,
+            "question": "Qu'est-ce qu'un transfert d'impact (ou de pollution) ?",
+            "answer": "Le fait de réduire l'impact environnemental d'un produit sur un indicateur tout en l'aggravant involontairement sur un autre.",
+            "hint": "Exemple : baisser le CO2 mais augmenter la toxicité des rejets aquatiques.",
+            "tag": "Principes"
+        },
+        {
+            "id": 9,
+            "question": "Définition de l'épuisement des ressources abiotiques",
+            "answer": "Indicateur mesurant la diminution de la disponibilité des ressources naturelles non renouvelables (minéraux, métaux fossiles).",
+            "hint": "Exprimé souvent en équivalent antimoine (Sb).",
+            "tag": "Indicateurs"
+        },
+        {
+            "id": 10,
+            "question": "Qu'est-ce que l'écotoxicité aquatique ?",
+            "answer": "Indicateur mesurant les impacts toxiques des substances chimiques rejetées dans les milieux aquatiques (eau douce, marine, sédiments).",
+            "hint": "Impact sur la faune et la flore des écosystèmes d'eau.",
+            "tag": "Indicateurs"
+        },
+        {
+            "id": 11,
+            "question": "Rôle de la norme ISO 14040",
+            "answer": "Elle fixe le cadre général, les principes fondamentaux et les exigences de l'Analyse de Cycle de Vie.",
+            "hint": "Norme internationale de référence pour l'ACV.",
+            "tag": "Normalisation"
+        },
+        {
+            "id": 12,
+            "question": "Rôle de la norme ISO 14044",
+            "answer": "Elle spécifie les exigences et fournit les lignes directrices détaillées pour la réalisation concrète d'une ACV.",
+            "hint": "Complément opérationnel de la norme ISO 14040.",
+            "tag": "Normalisation"
+        },
+        {
+            "id": 13,
+            "question": "Qu'est-ce que l'écoconception multicritère ?",
+            "answer": "Une approche qui analyse plusieurs catégories d'impacts environnementaux en même temps pour éviter les visions simplistes.",
+            "hint": "Ne pas se limiter au seul changement climatique.",
+            "tag": "Principes"
+        },
+        {
+            "id": 14,
+            "question": "Qu'appelle-t-on l'analyse des flux de matières (AFM) ?",
+            "answer": "Un outil comptable permettant de quantifier l'ensemble des flux de matières entrant, circulant et sortant d'un système.",
+            "hint": "Comptabilité physique des flux de ressources.",
+            "tag": "Outils"
+        },
+        {
+            "id": 15,
+            "question": "Qu'est-ce qu'une matrice de PAS (Product-Aspect-Strategy) ?",
+            "answer": "Un outil d'écoconception qualitatif croisant les étapes du cycle de vie avec les aspects environnementaux pour identifier des pistes d'amélioration.",
+            "hint": "Matrice d'écoconception de Brezet et van Hemel.",
+            "tag": "Outils"
+        },
+        {
+            "id": 16,
+            "question": "Qu'est-ce que l'écoconception par amélioration (ou refonte) ?",
+            "answer": "Démarche consistant à modifier ou optimiser un produit existant pour réduire son empreinte environnementale sans changer radicalement sa fonction.",
+            "hint": "Optimisation incrémentale d'un produit classique.",
+            "tag": "Stratégies"
+        },
+        {
+            "id": 17,
+            "question": "Qu'est-ce que la rupture en écoconception ?",
+            "answer": "Démarche innovante consistant à concevoir un tout nouveau concept ou service pour répondre au même besoin de manière radicalement plus soutenable.",
+            "hint": "Changement de paradigme technologique ou d'usage.",
+            "tag": "Stratégies"
+        },
+        {
+            "id": 18,
+            "question": "Qu'est-ce que la règle des 3R en gestion des déchets",
+            "answer": "Réduire, Réutiliser, Recycler (dans l'ordre de priorité environnementale).",
+            "hint": "La réduction à la source reste toujours la solution la plus efficace.",
+            "tag": "Fin de vie"
+        },
+        {
+            "id": 19,
+            "question": "Qu'est-ce qu'un écobilan ?",
+            "answer": "Terme historiquement utilisé en Suisse et en Europe francophone pour désigner l'Analyse de Cycle de Vie d'un produit.",
+            "hint": "Synonyme direct d'ACV dans certains contextes industriels.",
+            "tag": "Méthodologie"
+        },
+        {
+            "id": 20,
+            "question": "Pourquoi la phase d'utilisation est-elle souvent prépondérante sur les appareils énergivores ?",
+            "answer": "Parce que la consommation d'électricité ou de carburant sur toute la durée de vie cumulée dépasse souvent l'impact initial de la fabrication.",
+            "hint": "Exemple typique des appareils électroménagers ou des véhicules thermiques.",
+            "tag": "Analyse"
+        }
+    ]
+}

@@ -176,6 +176,16 @@
         file: "data/decks/ecoconception-cours-1.json",
         tags: ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
         difficulty: "Cours"
+      },
+      {
+        id: "ecoconception-cours-2",
+        title: "Écoconception - Cours 2 (Cycle de vie et Méthodologie ACV)",
+        description: "Approfondissement des méthodologies d'analyse, des étapes du cycle de vie et des indicateurs d'impacts environnementaux.",
+        category: "Écologie & Ingénierie",
+        icon: "🔄",
+        file: "data/decks/ecoconception-cours-2.json",
+        tags: ["Écoconception", "Biodiversité", "Ingénierie", "ACV"],
+        difficulty: "Cours"
       }
     ];
 
