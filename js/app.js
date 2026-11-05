@@ -212,6 +212,17 @@
         difficulty: "Cours"
       },
       {
+        id: "recherche-operationnelle-cm3",
+        title: "Recherche Opérationnelle — CM3 (Dualité et simplexe dual)",
+        description: "Flashcards couvrant la construction du dual, son interprétation économique, les théorèmes de dualité, les écarts complémentaires et l’algorithme du simplexe dual.",
+        category: "Optimisation et recherche opérationnelle",
+        icon: "⚖️",
+        file: "data/decks/recherche-op3.json",
+        cardsCount: 49,
+        tags: ["Dualité", "Simplexe dual", "Écarts complémentaires", "Prix fictifs"],
+        difficulty: "Cours"
+      },
+      {
         id: "methodes-numeriques-chap1-2",
         title: "Méthodes Numériques - Chapitres 1 et 2",
         description: "Deck complet d'une quarantaine de cartes couvrant l'intégralité des notions abordées dans les chapitres 1 et 2 de méthodes numériques.",

@@ -1,0 +1,353 @@
+{
+  "id": "recherche-operationnelle-cm3",
+  "title": "Recherche Opérationnelle — CM3 (Dualité et simplexe dual)",
+  "description": "Flashcards couvrant la construction du dual, son interprétation économique, les théorèmes de dualité, les écarts complémentaires et l’algorithme du simplexe dual.",
+  "category": "Optimisation et recherche opérationnelle",
+  "icon": "⚖️",
+  "language": "fr-FR",
+  "cards": [
+    {
+      "id": 1,
+      "question": "Qu’appelle-t-on problème primal et problème dual en programmation linéaire ?",
+      "answer": "Le primal (P) est le programme linéaire initial, par exemple celui qui maximise un profit de production. Le dual (D) est son problème miroir, par exemple celui qui minimise le coût d’acquisition des ressources.",
+      "hint": "L’un porte souvent sur la production, l’autre sur la valorisation des ressources.",
+      "tag": "Définitions"
+    },
+    {
+      "id": 2,
+      "question": "Que représentent les variables primales x ?",
+      "answer": "Les quantités d’activités ou de produits fabriqués dans le problème initial (P).",
+      "hint": "Ce sont les variables de décision du problème de départ.",
+      "tag": "Définitions"
+    },
+    {
+      "id": 3,
+      "question": "Que représentent les variables duales u ?",
+      "answer": "Les variables duales, aussi appelées prix fictifs ou coûts marginaux (shadow prices), sont associées aux contraintes du primal et mesurent le prix unitaire des ressources.",
+      "hint": "Chaque contrainte du primal possède une variable duale associée.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 4,
+      "question": "Que représentent les variables d’écart primales e ?",
+      "answer": "Elles mesurent les quantités de ressources inutilisées dans le primal, avec Ax + e = b et e ≥ 0.",
+      "hint": "Elles indiquent la partie des ressources qui n’est pas consommée.",
+      "tag": "Variables d’écart"
+    },
+    {
+      "id": 5,
+      "question": "Que représentent les variables d’écart duales f ?",
+      "answer": "Elles mesurent les excédents de valorisation des ressources par rapport au profit unitaire dans le dual, avec Aᵀu − f = c et f ≥ 0.",
+      "hint": "Elles sont associées aux contraintes duales.",
+      "tag": "Variables d’écart"
+    },
+    {
+      "id": 6,
+      "question": "Quel est le rôle des paramètres A, b et c dans le couple primal-dual ?",
+      "answer": "A est la matrice des consommations unitaires ; b représente les disponibilités des ressources et intervient dans l’objectif dual ; c représente les profits unitaires et intervient dans les contraintes duales.",
+      "hint": "Dans le dual, b passe dans l’objectif et c dans le second membre des contraintes.",
+      "tag": "Construction du dual"
+    },
+    {
+      "id": 7,
+      "question": "Quelle est la forme canonique du primal (P) et de son dual (D) présentée dans le cours ?",
+      "answer": "Primal : max z = cᵀx, sous Ax ≤ b et x ≥ 0. Dual : min w = bᵀu, sous Aᵀu ≥ c et u ≥ 0.",
+      "hint": "La maximisation devient une minimisation et A est transposée.",
+      "tag": "Construction du dual"
+    },
+    {
+      "id": 8,
+      "question": "Comment passe-t-on du primal au dual au niveau des dimensions ?",
+      "answer": "Un primal ayant m contraintes et n variables donne un dual ayant m variables duales et n contraintes.",
+      "hint": "Le nombre de contraintes et le nombre de variables s’échangent.",
+      "tag": "Construction du dual"
+    },
+    {
+      "id": 9,
+      "question": "Comment les coefficients de la fonction-objectif et les seconds membres du primal sont-ils réutilisés dans le dual ?",
+      "answer": "Le vecteur c du primal devient le second membre des contraintes duales ; le vecteur b du primal devient le vecteur des coefficients de la fonction-objectif duale.",
+      "hint": "c et b échangent leurs rôles.",
+      "tag": "Construction du dual"
+    },
+    {
+      "id": 10,
+      "question": "Que devient la matrice A lors du passage au dual ?",
+      "answer": "Elle est remplacée par sa transposée Aᵀ.",
+      "hint": "Les lignes deviennent des colonnes et inversement.",
+      "tag": "Construction du dual"
+    },
+    {
+      "id": 11,
+      "question": "Que signifie que la dualisation est une opération involutive ?",
+      "answer": "Construire le dual du dual redonne exactement le problème primal de départ.",
+      "hint": "Appliquer deux fois la transformation ramène au point initial.",
+      "tag": "Construction du dual"
+    },
+    {
+      "id": 12,
+      "question": "Quelle interprétation économique peut-on donner au problème dual dans le modèle acheteur-vendeur ?",
+      "answer": "Le dual représente un acheteur qui cherche à acquérir les ressources au coût global minimal, tout en proposant des prix unitaires qui valorisent chaque ressource au moins autant que le profit unitaire des produits.",
+      "hint": "Le primal maximise le profit du producteur ; le dual minimise le coût des ressources.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 13,
+      "question": "Que représente économiquement une variable duale optimale uᵢ* ?",
+      "answer": "Elle mesure le prix marginal optimal de la ressource i : la variation de la valeur optimale de l’objectif lorsqu’on ajoute une unité de cette ressource, dans les conditions de sensibilité indiquées par le cours.",
+      "hint": "C’est la valeur marginale d’une unité supplémentaire de ressource.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 14,
+      "question": "Quelle formule donne le vecteur dual optimal à partir de la base optimale du primal ?",
+      "answer": "Lorsque la base optimale A_B est non dégénérée, uᵀ = c_BᵀA_B⁻¹.",
+      "hint": "Utilisez les coefficients de l’objectif associés aux variables de base et l’inverse de la matrice de base.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 15,
+      "question": "Dans quelles conditions la formule de sensibilité z(b + Δb) = z(b) + uᵀΔb s’applique-t-elle selon le cours ?",
+      "answer": "Lorsque la base optimale A_B est non dégénérée et que la variation Δb est suffisamment petite pour conserver A_B⁻¹(b + Δb) ≥ 0 ; la base reste alors optimale.",
+      "hint": "La variation ne doit pas rendre les variables de base négatives.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 16,
+      "question": "Que signifie la relation ∂z/∂bᵢ = uᵢ* ?",
+      "answer": "Le prix dual optimal uᵢ* mesure la variation marginale de l’objectif optimal lorsqu’on augmente d’une unité la disponibilité de la ressource i, dans le cadre de validité de l’analyse de sensibilité.",
+      "hint": "Il s’agit de la valeur marginale d’une ressource supplémentaire.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 17,
+      "question": "Que dit le théorème de dualité faible ?",
+      "answer": "Pour toute solution réalisable x du primal en maximisation et toute solution réalisable u du dual en minimisation, on a cᵀx ≤ uᵀAx ≤ bᵀu, donc z ≤ w.",
+      "hint": "La valeur réalisable du primal ne dépasse jamais celle du dual.",
+      "tag": "Théorèmes de dualité"
+    },
+    {
+      "id": 18,
+      "question": "Quelle borne une solution réalisable du dual fournit-elle sur le problème primal ?",
+      "answer": "Elle fournit une borne supérieure sur le profit maximal réalisable du primal.",
+      "hint": "Le dual est un problème de minimisation qui encadre la valeur du primal par au-dessus.",
+      "tag": "Théorèmes de dualité"
+    },
+    {
+      "id": 19,
+      "question": "Que dit le théorème d’existence présenté dans le cours ?",
+      "answer": "Si le primal et le dual admettent tous deux au moins une solution réalisable, alors chacun possède une solution optimale finie.",
+      "hint": "Il faut que les deux problèmes soient réalisables.",
+      "tag": "Théorèmes de dualité"
+    },
+    {
+      "id": 20,
+      "question": "Que dit le théorème de dualité forte ?",
+      "answer": "Deux solutions réalisables x* du primal et u* du dual sont toutes deux optimales si et seulement si leurs valeurs d’objectif sont égales : cᵀx* = bᵀu*.",
+      "hint": "À l’optimum, les valeurs économiques du primal et du dual coïncident.",
+      "tag": "Théorèmes de dualité"
+    },
+    {
+      "id": 21,
+      "question": "Comment lire la valeur optimale d’une variable duale uᵢ* dans le tableau optimal du simplexe primal ?",
+      "answer": "Elle est égale à l’opposé du coût réduit de la variable d’écart primale eᵢ correspondante : uᵢ* = −(cₑᵢ − zₑᵢ).",
+      "hint": "Regardez le coût réduit de la colonne de la variable d’écart associée à la contrainte i.",
+      "tag": "Lecture du tableau optimal"
+    },
+    {
+      "id": 22,
+      "question": "Comment lire la valeur optimale d’une variable d’écart duale fⱼ* dans le tableau optimal du simplexe primal ?",
+      "answer": "Elle est égale à l’opposé du coût réduit de la variable primale xⱼ associée : fⱼ* = −(cⱼ − zⱼ).",
+      "hint": "Utilisez le coût réduit de la colonne de la variable de décision correspondante.",
+      "tag": "Lecture du tableau optimal"
+    },
+    {
+      "id": 23,
+      "question": "Quelle relation existe entre les matrices simpliciales optimales du primal et du dual ?",
+      "answer": "La matrice simpliciale optimale du dual est égale à l’opposée de la transposée de celle du primal.",
+      "hint": "Il faut transposer puis changer le signe.",
+      "tag": "Lecture du tableau optimal"
+    },
+    {
+      "id": 24,
+      "question": "Quel est le principe des écarts complémentaires ?",
+      "answer": "À l’optimum, la saturation d’une contrainte d’un problème est liée à la nullité de la variable duale ou primale associée dans l’autre problème.",
+      "hint": "Une ressource non utilisée a un prix dual nul ; une variable positive impose une contrainte associée saturée.",
+      "tag": "Écarts complémentaires"
+    },
+    {
+      "id": 25,
+      "question": "Quelle est la formulation mathématique des relations d’écarts complémentaires ?",
+      "answer": "Pour chaque contrainte i du primal, uᵢ*eᵢ* = 0 ; pour chaque variable j du primal, fⱼ*xⱼ* = 0.",
+      "hint": "Chaque paire de variables associées a un produit nul.",
+      "tag": "Écarts complémentaires"
+    },
+    {
+      "id": 26,
+      "question": "Que déduit-on si une ressource primale n’est pas entièrement utilisée, donc eᵢ* > 0 ?",
+      "answer": "La variable duale associée est nulle : uᵢ* = 0. Une ressource excédentaire a un prix marginal nul à l’optimum.",
+      "hint": "Appliquez uᵢ*eᵢ* = 0.",
+      "tag": "Écarts complémentaires"
+    },
+    {
+      "id": 27,
+      "question": "Que déduit-on si le prix dual optimal d’une ressource est strictement positif, uᵢ* > 0 ?",
+      "answer": "La contrainte primale associée est saturée : eᵢ* = 0, donc la totalité de la ressource est utilisée.",
+      "hint": "Un prix marginal positif implique une ressource entièrement consommée.",
+      "tag": "Écarts complémentaires"
+    },
+    {
+      "id": 28,
+      "question": "Que déduit-on si une quantité de produit primale est strictement positive, xⱼ* > 0 ?",
+      "answer": "La contrainte duale associée est saturée : fⱼ* = 0, donc Σᵢ aᵢⱼuᵢ* = cⱼ.",
+      "hint": "Un produit fabriqué impose l’égalité entre sa valorisation par les ressources et son profit unitaire.",
+      "tag": "Écarts complémentaires"
+    },
+    {
+      "id": 29,
+      "question": "Que déduit-on si la valorisation duale des ressources dépasse strictement le profit unitaire d’un produit ?",
+      "answer": "Si Σᵢ aᵢⱼuᵢ* > cⱼ, alors fⱼ* > 0 et la quantité produite optimale est nulle : xⱼ* = 0.",
+      "hint": "Si les ressources coûtent davantage que ce que rapporte le produit, il n’est pas fabriqué.",
+      "tag": "Écarts complémentaires"
+    },
+    {
+      "id": 30,
+      "question": "Comment retrouver une solution optimale du primal à partir d’une solution optimale du dual ?",
+      "answer": "On repère les contraintes duales non saturées pour annuler les variables primales associées, puis on utilise les variables duales strictement positives pour imposer la saturation des contraintes primales correspondantes et résoudre le système obtenu.",
+      "hint": "Commencez par identifier les fⱼ* positifs, puis les uᵢ* positifs.",
+      "tag": "Résolution par le dual"
+    },
+    {
+      "id": 31,
+      "question": "Pourquoi peut-il être intéressant de résoudre le dual plutôt que le primal ?",
+      "answer": "Lorsque le primal comporte beaucoup de variables mais peu de contraintes, le dual possède peu de variables et peut être résolu graphiquement si celui-ci n’en comporte que deux.",
+      "hint": "Comparez le nombre de variables du primal au nombre de contraintes.",
+      "tag": "Résolution par le dual"
+    },
+    {
+      "id": 32,
+      "question": "Quelles sont les étapes de la méthode de résolution du primal par le dual lorsque le primal a 3 variables et 2 contraintes ?",
+      "answer": "Écrire le dual à 2 variables et 3 contraintes ; le résoudre graphiquement ; utiliser les contraintes duales non saturées pour annuler les variables primales correspondantes ; puis utiliser les variables duales positives pour écrire les contraintes primales saturées et déterminer x*.",
+      "hint": "Le dual se résout en 2D, puis les écarts complémentaires permettent de retrouver le primal.",
+      "tag": "Résolution par le dual"
+    },
+    {
+      "id": 33,
+      "question": "À quoi sert le simplexe dual et dans quelle situation s’applique-t-il ?",
+      "answer": "Il sert à restaurer la faisabilité primale tout en conservant la faisabilité duale. Il s’applique lorsque la base primale est non réalisable, avec au moins un second membre négatif, mais que les coûts réduits ont déjà le bon signe pour l’optimalité en maximisation.",
+      "hint": "Le primal n’est pas réalisable au départ, mais la condition d’optimalité est déjà satisfaite.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 34,
+      "question": "Quelles sont les deux conditions de départ du simplexe dual en maximisation ?",
+      "answer": "Au moins un second membre est strictement négatif (bᵢ < 0), et tous les coûts réduits vérifient cⱼ − zⱼ ≤ 0.",
+      "hint": "Une condition concerne la faisabilité primale, l’autre l’optimalité duale.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 35,
+      "question": "Quelle différence fondamentale distingue le simplexe primal du simplexe dual dans le choix du pivot ?",
+      "answer": "Le simplexe primal choisit d’abord la variable entrante puis la variable sortante ; le simplexe dual choisit d’abord la variable sortante puis la variable entrante.",
+      "hint": "L’ordre des deux choix est inversé.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 36,
+      "question": "Quelle est la première étape de mise en forme avant d’appliquer le simplexe dual selon le cours ?",
+      "answer": "Convertir toutes les contraintes en ≤, notamment en multipliant les contraintes ≥ par −1, puis ajouter les variables d’écart eᵢ ≥ 0.",
+      "hint": "On cherche un tableau avec variables d’écart et seconds membres éventuellement négatifs.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 37,
+      "question": "Quel est le critère d’arrêt du simplexe dual en maximisation ?",
+      "answer": "Lorsque tous les seconds membres bᵢ sont positifs ou nuls, la faisabilité primale est retrouvée ; comme les coûts réduits conservent leur bon signe, la solution est alors réalisable et optimale.",
+      "hint": "Il faut avoir restauré la faisabilité primale.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 38,
+      "question": "Comment choisit-on la variable sortante dans le simplexe dual ?",
+      "answer": "On choisit la variable de base située sur la ligne dont le second membre est le plus négatif : s = arg min{bᵢ | bᵢ < 0}.",
+      "hint": "On commence par la ligne présentant le second membre le plus négatif.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 39,
+      "question": "Quel test permet de détecter l’irréalisabilité lors du choix de la variable entrante dans le simplexe dual ?",
+      "answer": "Si tous les coefficients aₛⱼ de la ligne pivot, pour les variables hors-base, sont positifs ou nuls, la contrainte ne peut pas être satisfaite et le primal est irréalisable.",
+      "hint": "Aucun coefficient négatif ne permet de faire remonter le second membre négatif.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 40,
+      "question": "Quelles colonnes peut-on considérer pour choisir la variable entrante dans le simplexe dual ?",
+      "answer": "Uniquement les colonnes hors-base dont le coefficient sur la ligne pivot est strictement négatif : aₛⱼ < 0.",
+      "hint": "Les coefficients nuls ou positifs sont exclus du calcul du ratio.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 41,
+      "question": "Comment choisit-on la variable entrante dans le simplexe dual ?",
+      "answer": "On calcule le ratio (cⱼ − zⱼ)/aₛⱼ pour les colonnes hors-base ayant aₛⱼ < 0, puis on choisit le ratio minimum, conformément à la règle donnée dans le cours.",
+      "hint": "Le test de ratio ne porte que sur les coefficients strictement négatifs de la ligne pivot.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 42,
+      "question": "Quel est le signe du coefficient pivot dans le simplexe dual ?",
+      "answer": "Le coefficient pivot est toujours strictement négatif : aₛₑ < 0.",
+      "hint": "Il s’oppose au signe du pivot du simplexe primal standard.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 43,
+      "question": "Que fait-on après avoir choisi la variable entrante et la variable sortante dans le simplexe dual ?",
+      "answer": "On effectue un pivot de Gauss-Jordan autour du coefficient pivot strictement négatif, puis on recommence les tests jusqu’à obtenir tous les seconds membres positifs ou nuls.",
+      "hint": "Le pivotage est suivi d’un nouveau contrôle de faisabilité.",
+      "tag": "Simplexe dual"
+    },
+    {
+      "id": 44,
+      "question": "Pourquoi le simplexe dual peut-il être plus rapide que la méthode du Grand M pour certaines contraintes ≥ ?",
+      "answer": "Lorsque les coûts réduits initiaux vérifient déjà cⱼ − zⱼ ≤ 0, on peut multiplier les contraintes ≥ par −1 puis appliquer le simplexe dual sans introduire de variables artificielles.",
+      "hint": "Il permet parfois d’éviter les variables artificielles.",
+      "tag": "Choix de méthode"
+    },
+    {
+      "id": 45,
+      "question": "Quand faut-il préférer la résolution du dual à celle du primal ?",
+      "answer": "Lorsque le primal possède beaucoup de variables (n ≥ 3) mais seulement deux contraintes : le dual n’a alors que deux variables et peut être résolu graphiquement, avant de retrouver la solution primale avec les écarts complémentaires.",
+      "hint": "Le dual échange le nombre de variables et de contraintes.",
+      "tag": "Choix de méthode"
+    },
+    {
+      "id": 46,
+      "question": "Comment prouver rapidement qu’une solution candidate du primal est optimale sans exécuter le simplexe ?",
+      "answer": "On utilise les écarts complémentaires pour déterminer une solution duale candidate, on vérifie sa réalisabilité dans le dual, puis on vérifie l’égalité des objectifs cᵀx* = bᵀu*.",
+      "hint": "Combinez réalisabilité duale et égalité des valeurs d’objectif.",
+      "tag": "Choix de méthode"
+    },
+    {
+      "id": 47,
+      "question": "Comment décider s’il est rentable d’acheter une unité supplémentaire d’une ressource au prix unitaire p ?",
+      "answer": "Comparer le prix demandé p à la variable duale optimale uᵢ* : l’achat est intéressant si la valeur marginale de la ressource, uᵢ*, est supérieure au prix p, sous les conditions de validité de l’analyse marginale.",
+      "hint": "Comparez le coût d’achat au prix fictif de la ressource.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 48,
+      "question": "Quelles différences essentielles distinguent le simplexe primal et le simplexe dual en maximisation ?",
+      "answer": "Le simplexe primal part d’une base primale réalisable mais non optimale, choisit d’abord l’entrante puis la sortante et utilise un pivot strictement positif. Le simplexe dual part d’une base primale non réalisable mais dualement réalisable, choisit d’abord la sortante puis l’entrante et utilise un pivot strictement négatif.",
+      "hint": "Comparez le point de départ, l’ordre de sélection des variables et le signe du pivot.",
+      "tag": "Comparaison des méthodes"
+    },
+    {
+      "id": 49,
+      "question": "Quelles sont les quatre compétences pratiques à savoir refaire sans regarder à la fin du cours ?",
+      "answer": "Construire le dual de n’importe quel primal et interpréter uᵢ ; lire x*, e*, u*, f* et l’égalité z* = w* dans le tableau optimal ; retrouver la solution optimale d’un problème avec les écarts complémentaires ; exécuter les itérations du simplexe dual jusqu’à obtenir bᵢ ≥ 0.",
+      "hint": "Elles couvrent la construction, la lecture de tableau, les écarts complémentaires et l’algorithme dual.",
+      "tag": "Synthèse"
+    }
+  ]
+}
