@@ -1,0 +1,402 @@
+{
+  "id": "recherche-operationnelle-cm2",
+  "title": "Recherche Opérationnelle — CM2 (Programmation linéaire et simplexe)",
+  "description": "Flashcards couvrant les notions, la modélisation, les formes fondamentales, la résolution graphique, l’algorithme du simplexe et la méthode du Grand M.",
+  "category": "Optimisation et recherche opérationnelle",
+  "icon": "📊",
+  "language": "fr-FR",
+  "cards": [
+    {
+      "id": 1,
+      "question": "Quel est l’objectif général de la programmation linéaire ?",
+      "answer": "Allouer de manière optimale des ressources limitées, en maximisant un bénéfice ou en minimisant un coût, sous un ensemble de contraintes.",
+      "hint": "Pensez à l’optimisation avec des ressources limitées.",
+      "tag": "Définitions"
+    },
+    {
+      "id": 2,
+      "question": "Que représentent les variables de décision d’un programme linéaire ?",
+      "answer": "Les grandeurs inconnues que l’on cherche à déterminer, par exemple les quantités de produits à fabriquer ou les montants à investir.",
+      "hint": "Ce sont les inconnues du problème.",
+      "tag": "Modélisation"
+    },
+    {
+      "id": 3,
+      "question": "Qu’est-ce que la fonction-objectif d’un programme linéaire ?",
+      "answer": "L’unique critère économique à optimiser. Elle s’écrit z = cᵀx et permet notamment de maximiser un bénéfice ou de minimiser un coût.",
+      "hint": "C’est la quantité que l’on cherche à rendre la plus grande ou la plus petite possible.",
+      "tag": "Modélisation"
+    },
+    {
+      "id": 4,
+      "question": "Que représentent les coefficients du vecteur c dans la fonction-objectif ?",
+      "answer": "Les coefficients de coût unitaire ou de profit associés aux variables de décision.",
+      "hint": "Ils indiquent la contribution de chaque variable à l’objectif.",
+      "tag": "Modélisation"
+    },
+    {
+      "id": 5,
+      "question": "Que représentent les contraintes Ax ≤ b dans un programme linéaire ?",
+      "answer": "Les restrictions techniques, budgétaires ou physiques qui limitent les variables de décision.",
+      "hint": "Elles traduisent les ressources disponibles ou les limites à respecter.",
+      "tag": "Modélisation"
+    },
+    {
+      "id": 6,
+      "question": "Que représentent la matrice A et le vecteur b dans Ax ≤ b ?",
+      "answer": "A contient les coefficients techniques de consommation ; b est le vecteur second membre qui indique les ressources disponibles.",
+      "hint": "A décrit les consommations et b les limites.",
+      "tag": "Modélisation"
+    },
+    {
+      "id": 7,
+      "question": "Qu’appelle-t-on région admissible d’un programme linéaire ?",
+      "answer": "L’ensemble D des solutions qui vérifient simultanément toutes les contraintes, y compris les contraintes de non-négativité.",
+      "hint": "C’est l’intersection de tous les domaines autorisés.",
+      "tag": "Géométrie"
+    },
+    {
+      "id": 8,
+      "question": "Où un programme linéaire qui possède un optimum fini atteint-il nécessairement au moins un optimum ?",
+      "answer": "En au moins un point extrême, c’est-à-dire en un sommet de la région admissible.",
+      "hint": "Il faut regarder les sommets du domaine.",
+      "tag": "Théorèmes"
+    },
+    {
+      "id": 9,
+      "question": "Quelle est la forme canonique d’un programme linéaire de maximisation présentée dans le cours ?",
+      "answer": "max z = cᵀx, sous les contraintes Ax ≤ b et x ≥ 0.",
+      "hint": "Objectif en maximisation, contraintes en ≤ et variables non négatives.",
+      "tag": "Formes du PL"
+    },
+    {
+      "id": 10,
+      "question": "Quelles propriétés caractérisent la forme standard d’un programme linéaire ?",
+      "answer": "Toutes les contraintes, hors non-négativité, sont écrites comme des égalités et les seconds membres sont positifs ou nuls.",
+      "hint": "Il faut transformer les inégalités en égalités.",
+      "tag": "Formes du PL"
+    },
+    {
+      "id": 11,
+      "question": "Comment transforme-t-on une contrainte de type aᵢ₁x₁ + … + aᵢₙxₙ ≤ bᵢ en égalité ?",
+      "answer": "On ajoute une variable d’écart eᵢ ≥ 0 : aᵢ₁x₁ + … + aᵢₙxₙ + eᵢ = bᵢ.",
+      "hint": "La variable d’écart mesure la ressource qui n’est pas consommée.",
+      "tag": "Formes du PL"
+    },
+    {
+      "id": 12,
+      "question": "Que représente une variable d’écart eᵢ dans une contrainte ≤ ?",
+      "answer": "La quantité de ressource qui reste disponible ou qui n’est pas utilisée lorsque la contrainte est satisfaite.",
+      "hint": "Si toute la ressource est utilisée, que vaut-elle ?",
+      "tag": "Formes du PL"
+    },
+    {
+      "id": 13,
+      "question": "Que signifie partitionner la matrice A en colonnes de base et hors-base ?",
+      "answer": "On écrit A = [A_B, A_N], où A_B est une sous-matrice carrée inversible de taille m × m et A_N regroupe les autres colonnes.",
+      "hint": "La base contient m colonnes indépendantes.",
+      "tag": "Bases"
+    },
+    {
+      "id": 14,
+      "question": "Comment exprime-t-on les variables de base en fonction des variables hors-base ?",
+      "answer": "À partir de A_Bx_B + A_Nx_N = b, on obtient x_B = A_B⁻¹(b − A_Nx_N).",
+      "hint": "Isolez x_B en multipliant par l’inverse de A_B.",
+      "tag": "Bases"
+    },
+    {
+      "id": 15,
+      "question": "Comment construit-on une solution de base associée à une base donnée ?",
+      "answer": "On fixe toutes les variables hors-base à zéro, soit x_N = 0, puis on calcule x_B = A_B⁻¹b.",
+      "hint": "Les variables hors-base sont annulées.",
+      "tag": "Bases"
+    },
+    {
+      "id": 16,
+      "question": "À quelle condition une solution de base est-elle réalisable ?",
+      "answer": "Lorsque toutes ses variables de base sont positives ou nulles : x_B ≥ 0.",
+      "hint": "Vérifiez le signe des variables de base.",
+      "tag": "Bases"
+    },
+    {
+      "id": 17,
+      "question": "Quelles sont les trois caractérisations équivalentes d’un point d’un polyèdre D données par le cours ?",
+      "answer": "Être un sommet de D, être un point extrême de D, et être une solution de base réalisable (BFS).",
+      "hint": "Le théorème relie géométrie et algèbre.",
+      "tag": "Théorèmes"
+    },
+    {
+      "id": 18,
+      "question": "Que signifie géométriquement qu’un point est extrême ?",
+      "answer": "Il ne peut pas s’écrire comme combinaison convexe stricte de deux points distincts du domaine admissible.",
+      "hint": "On ne peut pas le placer strictement au milieu d’un segment du domaine.",
+      "tag": "Théorèmes"
+    },
+    {
+      "id": 19,
+      "question": "Dans quel cas la résolution graphique d’un programme linéaire est-elle applicable ?",
+      "answer": "Lorsqu’il y a exactement deux variables de décision, x₁ et x₂.",
+      "hint": "La méthode repose sur un dessin dans le plan.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 20,
+      "question": "Quelle forme prend la région admissible en résolution graphique à deux variables ?",
+      "answer": "Un polygone convexe plan, éventuellement vide ou non borné.",
+      "hint": "Chaque contrainte définit un demi-plan.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 21,
+      "question": "Que sont les droites d’iso-profit ou d’iso-coût ?",
+      "answer": "Les droites de niveau de la fonction-objectif : elles regroupent les points donnant la même valeur de z et sont parallèles entre elles.",
+      "hint": "La valeur de l’objectif reste constante sur chacune de ces droites.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 22,
+      "question": "Quelles sont les principales étapes pour construire graphiquement la région admissible ?",
+      "answer": "Tracer les droites frontières des contraintes, déterminer les demi-plans autorisés en tenant compte de x₁ ≥ 0 et x₂ ≥ 0, puis identifier leur intersection.",
+      "hint": "Commencez par remplacer chaque inégalité par une égalité pour tracer sa frontière.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 23,
+      "question": "Comment détermine-t-on graphiquement un optimum en maximisation ?",
+      "answer": "On déplace parallèlement la droite d’iso-profit dans le sens de croissance de l’objectif, jusqu’à sa dernière position qui touche encore le domaine admissible.",
+      "hint": "On cherche la parallèle la plus haute qui touche le domaine.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 24,
+      "question": "Comment détermine-t-on graphiquement un optimum en minimisation ?",
+      "answer": "On déplace parallèlement la droite d’iso-coût dans le sens de diminution de l’objectif, jusqu’à sa dernière position qui touche encore le domaine admissible.",
+      "hint": "On cherche la parallèle la plus basse qui touche le domaine.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 25,
+      "question": "À quoi sert le vecteur gradient c = (c₁, c₂)ᵀ dans la résolution graphique ?",
+      "answer": "Il indique la direction de croissance de la fonction-objectif et aide à choisir le sens de déplacement des droites de niveau.",
+      "hint": "Il pointe dans le sens où z augmente.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 26,
+      "question": "Comment calcule-t-on précisément les coordonnées du point optimal trouvé graphiquement ?",
+      "answer": "On résout le système formé par les contraintes actives au point optimal, c’est-à-dire les contraintes qui y sont vérifiées avec égalité.",
+      "hint": "Cherchez l’intersection des frontières qui se rencontrent au sommet optimal.",
+      "tag": "Résolution graphique"
+    },
+    {
+      "id": 27,
+      "question": "Qu’est-ce qu’une contrainte saturée ou active à l’optimum ?",
+      "answer": "Une contrainte vérifiée avec égalité stricte au point optimal ; sa variable d’écart vaut alors eᵢ = 0.",
+      "hint": "Toute la ressource associée est utilisée.",
+      "tag": "Contraintes"
+    },
+    {
+      "id": 28,
+      "question": "Qu’est-ce qu’une contrainte non saturée à l’optimum ?",
+      "answer": "Une contrainte vérifiée avec une inégalité stricte ; sa variable d’écart est strictement positive, eᵢ > 0.",
+      "hint": "Il reste une partie de la ressource disponible.",
+      "tag": "Contraintes"
+    },
+    {
+      "id": 29,
+      "question": "Que signifie une solution optimale multiple en résolution graphique ?",
+      "answer": "La droite d’iso-profit ou d’iso-coût est parallèle à une arête active du polygone admissible ; plusieurs points de cette arête sont optimaux.",
+      "hint": "L’objectif garde la même valeur le long d’une arête.",
+      "tag": "Cas particuliers"
+    },
+    {
+      "id": 30,
+      "question": "Quand un problème de maximisation est-il non borné ?",
+      "answer": "Lorsque le domaine admissible s’étend dans une direction où la fonction-objectif peut croître indéfiniment, donc z → +∞.",
+      "hint": "Il n’existe pas de valeur maximale finie.",
+      "tag": "Cas particuliers"
+    },
+    {
+      "id": 31,
+      "question": "Que signifie que le domaine admissible est vide ?",
+      "answer": "Les contraintes sont incompatibles : aucune solution ne les vérifie toutes simultanément.",
+      "hint": "Il n’existe aucun point satisfaisant toutes les contraintes.",
+      "tag": "Cas particuliers"
+    },
+    {
+      "id": 32,
+      "question": "Qu’est-ce qu’un sommet dégénéré en dimension 2 ?",
+      "answer": "Un sommet en lequel plus de deux droites de contraintes concourent.",
+      "hint": "Plus de deux frontières passent par le même sommet.",
+      "tag": "Cas particuliers"
+    },
+    {
+      "id": 33,
+      "question": "Quel est le principe général de l’algorithme du simplexe ?",
+      "answer": "Partir d’une solution de base réalisable et passer de sommet en sommet adjacent le long des arêtes du polyèdre, en améliorant la fonction-objectif.",
+      "hint": "Le simplexe explore les sommets voisins plutôt que tout le domaine.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 34,
+      "question": "Qu’est-ce que le coût réduit d’une variable hors-base ?",
+      "answer": "C’est c̄ⱼ = cⱼ − zⱼ. Il représente le gain marginal sur la fonction-objectif par unité de variable hors-base introduite.",
+      "hint": "Il mesure l’effet marginal de l’entrée d’une variable dans la base.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 35,
+      "question": "Quelle est l’expression du coût réduit sous forme matricielle ?",
+      "answer": "Le vecteur des coûts réduits des variables hors-base est c̄_Nᵀ = c_Nᵀ − c_BᵀA_B⁻¹A_N.",
+      "hint": "Il compare les coefficients de l’objectif aux coûts induits par la base.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 36,
+      "question": "Comment initialise-t-on le simplexe standard lorsque b ≥ 0 et que les contraintes sont en ≤ ?",
+      "answer": "On met le programme sous forme standard et on choisit généralement les variables d’écart comme base initiale réalisable.",
+      "hint": "Avec les variables de décision nulles, les variables d’écart prennent les valeurs de b.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 37,
+      "question": "Quel est le critère d’arrêt d’optimalité du simplexe pour un problème de maximisation ?",
+      "answer": "La base courante est optimale lorsque tous les coûts réduits des variables hors-base sont négatifs ou nuls : cⱼ − zⱼ ≤ 0.",
+      "hint": "Aucune variable hors-base ne doit permettre d’améliorer l’objectif.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 38,
+      "question": "Quelle règle choisit la variable entrante dans le simplexe de maximisation selon le cours ?",
+      "answer": "Le premier critère de Dantzig : choisir une variable hors-base dont le coût réduit est strictement positif et maximal.",
+      "hint": "Parmi les coûts réduits positifs, prenez le plus grand.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 39,
+      "question": "Comment choisit-on la variable sortante avec le test du ratio minimum ?",
+      "answer": "Parmi les lignes dont le coefficient aᵢₑ dans la colonne entrante est strictement positif, on choisit celle qui minimise le rapport bᵢ/aᵢₑ.",
+      "hint": "Ne retenez que les coefficients strictement positifs de la colonne entrante.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 40,
+      "question": "Que conclure si tous les coefficients de la colonne entrante sont négatifs ou nuls ?",
+      "answer": "Le problème est non borné pour la maximisation : la variable entrante peut augmenter sans qu’une variable de base soit forcée à sortir, et z peut tendre vers +∞.",
+      "hint": "Le test du ratio minimum ne trouve aucune ligne admissible.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 41,
+      "question": "Comment effectue-t-on le pivotage sur la ligne pivot ?",
+      "answer": "On divise toute la ligne pivot par le coefficient pivot aₛₑ afin de rendre ce coefficient égal à 1.",
+      "hint": "Le pivot doit devenir égal à 1.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 42,
+      "question": "Comment annule-t-on les autres coefficients de la colonne pivot ?",
+      "answer": "Pour chaque autre ligne i, on effectue Lᵢ ← Lᵢ − aᵢₑLₛ, où Lₛ est la nouvelle ligne pivot.",
+      "hint": "Utilisez la ligne pivot normalisée pour obtenir des zéros dans la colonne.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 43,
+      "question": "Comment met-on à jour la ligne de l’objectif pendant le pivotage ?",
+      "answer": "On effectue L_z ← L_z − (cₑ − zₑ)Lₛ, avec Lₛ la nouvelle ligne pivot.",
+      "hint": "On élimine le coût réduit de la variable entrante dans la ligne objectif.",
+      "tag": "Simplexe"
+    },
+    {
+      "id": 44,
+      "question": "Quand faut-il recourir à la méthode du Grand M ?",
+      "answer": "Lorsque des contraintes en ≥ ou des égalités empêchent d’obtenir directement une base réalisable avec les seules variables d’écart.",
+      "hint": "L’origine ne fournit alors pas nécessairement une base réalisable.",
+      "tag": "Grand M"
+    },
+    {
+      "id": 45,
+      "question": "Pourquoi introduit-on une variable artificielle dans la méthode du Grand M ?",
+      "answer": "Pour construire une base initiale, notamment lorsqu’une contrainte est une égalité ou une inégalité ≥ et que les variables d’écart ne suffisent pas.",
+      "hint": "Elle permet de démarrer l’algorithme avec une base.",
+      "tag": "Grand M"
+    },
+    {
+      "id": 46,
+      "question": "Comment traite-t-on une contrainte ≤ avec bᵢ ≥ 0 dans la mise sous forme standard ?",
+      "answer": "On ajoute une variable d’écart positive : … + eᵢ = bᵢ, avec eᵢ ≥ 0. Elle ne reçoit pas de pénalité dans la fonction-objectif.",
+      "hint": "C’est le cas standard habituel.",
+      "tag": "Grand M"
+    },
+    {
+      "id": 47,
+      "question": "Comment traite-t-on une contrainte d’égalité avec bᵢ ≥ 0 dans la méthode du Grand M ?",
+      "answer": "On ajoute une variable artificielle aᵢ ≥ 0 : … + aᵢ = bᵢ. Dans un problème de maximisation, son coefficient dans l’objectif est −M ; en minimisation, il est +M.",
+      "hint": "L’artificielle est fortement pénalisée pour être éliminée de la solution.",
+      "tag": "Grand M"
+    },
+    {
+      "id": 48,
+      "question": "Comment transforme-t-on une contrainte ≥ avec bᵢ ≥ 0 dans la méthode du Grand M ?",
+      "answer": "On soustrait une variable d’écart et on ajoute une variable artificielle : … − eᵢ + aᵢ = bᵢ, avec eᵢ ≥ 0 et aᵢ ≥ 0.",
+      "hint": "La contrainte ≥ nécessite une variable d’excès et une artificielle.",
+      "tag": "Grand M"
+    },
+    {
+      "id": 49,
+      "question": "Quelle pénalité applique-t-on aux variables artificielles dans la méthode du Grand M ?",
+      "answer": "On ajoute −M·aᵢ à l’objectif en maximisation et +M·aᵢ en minimisation, avec M très grand et positif.",
+      "hint": "La pénalité doit décourager le maintien d’une artificielle positive.",
+      "tag": "Grand M"
+    },
+    {
+      "id": 50,
+      "question": "Que conclure si une variable artificielle reste en base avec une valeur strictement positive à la fin du simplexe ?",
+      "answer": "Le problème initial n’admet aucune solution réalisable.",
+      "hint": "Une artificielle positive signifie que les contraintes initiales ne peuvent pas être satisfaites sans aide artificielle.",
+      "tag": "Grand M"
+    },
+    {
+      "id": 51,
+      "question": "Quelle méthode choisir pour un programme linéaire ayant exactement deux variables de décision ?",
+      "answer": "La résolution graphique, en traçant les droites de contraintes, le polygone admissible et les droites d’iso-profit ou d’iso-coût.",
+      "hint": "Le nombre de variables permet de choisir la méthode.",
+      "tag": "Choix de méthode"
+    },
+    {
+      "id": 52,
+      "question": "Quelle méthode choisir pour au moins trois variables avec uniquement des contraintes ≤ et b ≥ 0 ?",
+      "answer": "Le simplexe standard, car les variables d’écart fournissent directement une base initiale réalisable.",
+      "hint": "Aucune variable artificielle n’est nécessaire dans ce cas présenté par le cours.",
+      "tag": "Choix de méthode"
+    },
+    {
+      "id": 53,
+      "question": "Quelle méthode choisir en présence de contraintes ≥ ou d’égalités strictes ?",
+      "answer": "La méthode du Grand M, qui introduit des variables artificielles pénalisées dans la fonction-objectif.",
+      "hint": "Il faut construire une base initiale réalisable.",
+      "tag": "Choix de méthode"
+    },
+    {
+      "id": 54,
+      "question": "Comment analyser l’effet de l’ajout d’une unité de ressource à une contrainte ?",
+      "answer": "Il faut vérifier si la contrainte est saturée : si eᵢ > 0, l’apport marginal est nul selon la fiche ; si eᵢ = 0, il peut exister un coût d’opportunité ou une valeur duale non nulle.",
+      "hint": "Regardez d’abord la valeur de la variable d’écart.",
+      "tag": "Interprétation économique"
+    },
+    {
+      "id": 55,
+      "question": "Quel est le critère d’optimalité du simplexe en maximisation, et quelle condition supplémentaire faut-il vérifier avec le Grand M ?",
+      "answer": "Les coûts réduits doivent être tous négatifs ou nuls ; avec le Grand M, toutes les variables artificielles doivent également être sorties de la base ou avoir une valeur nulle.",
+      "hint": "Le Grand M ajoute une vérification de faisabilité.",
+      "tag": "Synthèse"
+    },
+    {
+      "id": 56,
+      "question": "Quelles sont les quatre compétences pratiques que le cours demande de savoir refaire sans regarder ?",
+      "answer": "Mettre un PL sous forme standard matricielle avec variables d’écart ; construire et optimiser graphiquement un polygone admissible ; remplir un tableau du simplexe et effectuer un pivotage complet ; augmenter un problème avec une variable artificielle et le coefficient −M pour une contrainte ≥.",
+      "hint": "Il y a une compétence de modélisation, une graphique et deux algorithmiques.",
+      "tag": "Synthèse"
+    }
+  ]
+}

@@ -50,6 +50,22 @@
       "difficulty": "Avancé"
     },
     {
+      "id": "recherche-operationnelle-cm2",
+      "title": "Recherche Opérationnelle — CM2 (Programmation linéaire et simplexe)",
+      "description": "Flashcards couvrant les notions, la modélisation, les formes fondamentales, la résolution graphique, l’algorithme du simplexe et la méthode du Grand M.",
+      "category": "Optimisation et recherche opérationnelle",
+      "icon": "📊",
+      "file": "data/decks/recherche-op2.json",
+      "cardsCount": 56,
+      "tags": [
+        "Programmation linéaire",
+        "Simplexe",
+        "Grand M",
+        "Résolution graphique"
+      ],
+      "difficulty": "Cours"
+    },
+    {
       "id": "methodes-numeriques-chap1-2",
       "title": "Méthodes Numériques - Chapitres 1 et 2",
       "description": "Deck complet d'une quarantaine de cartes couvrant l'intégralité des notions abordées dans les chapitres 1 et 2 de méthodes numériques.",
